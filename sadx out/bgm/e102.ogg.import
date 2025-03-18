@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b0ku2spebtcix"
+path="res://.godot/imported/e102.ogg-80a38ff752a37e2a53698cca812fde41.oggvorbisstr"
+
+[deps]
+
+source_file="res://sadx out/bgm/e102.ogg"
+dest_files=["res://.godot/imported/e102.ogg-80a38ff752a37e2a53698cca812fde41.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

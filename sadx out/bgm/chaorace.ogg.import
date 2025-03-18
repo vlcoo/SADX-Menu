@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cwqhj57qxqu5i"
+path="res://.godot/imported/chaorace.ogg-3a93054c60a4673bf9d6cce5df8f1dc4.oggvorbisstr"
+
+[deps]
+
+source_file="res://sadx out/bgm/chaorace.ogg"
+dest_files=["res://.godot/imported/chaorace.ogg-3a93054c60a4673bf9d6cce5df8f1dc4.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

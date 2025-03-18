@@ -1,0 +1,4 @@
+365168,sphe_10.png,64x64
+365086,sphe_6.png,64x64
+365087,sphe_7.png,64x64
+365254,sphe_cursol.png,256x256

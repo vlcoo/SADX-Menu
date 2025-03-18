@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c7qfuna4cgh0s"
+path="res://.godot/imported/tical.ogg-e6deb69e55da5c39cb2132eb2749e13b.oggvorbisstr"
+
+[deps]
+
+source_file="res://sadx out/bgm/tical.ogg"
+dest_files=["res://.godot/imported/tical.ogg-e6deb69e55da5c39cb2132eb2749e13b.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

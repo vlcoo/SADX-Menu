@@ -1,0 +1,11 @@
+365322,cs_ce_bd_1.png,256x64
+365323,cs_ce_bd_2.png,256x64
+365324,cs_ce_bd_3.png,128x64
+365109,CS_CE_BU.png,64x128
+365106,CS_CE_O.png,256x256
+365108,CS_CE_OD.png,256x128
+365107,CS_CE_OU.png,256x128
+365105,CS_CE_TX.png,256x32
+10000035,cs_sinkou_e.png,64x32
+10000448,CS_TX_e.png,512x32
+10000525,sstx_body.png,32x32

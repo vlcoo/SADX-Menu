@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://da8m1w8400has"
+path="res://.godot/imported/chaos_p1.wav-1ee0c50317b93ff8969f2a422f074345.sample"
+
+[deps]
+
+source_file="res://sadx out/bgm/chaos_p1.wav"
+dest_files=["res://.godot/imported/chaos_p1.wav-1ee0c50317b93ff8969f2a422f074345.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bk8530wjjni6m"
+path="res://.godot/imported/amy.ogg-3375cc2b2214ccc3bbc3b3f416a95f36.oggvorbisstr"
+
+[deps]
+
+source_file="res://sadx out/bgm/amy.ogg"
+dest_files=["res://.godot/imported/amy.ogg-3375cc2b2214ccc3bbc3b3f416a95f36.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

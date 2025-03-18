@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b2dirtgmh8sal"
+path="res://.godot/imported/evtbgm04.ogg-bf5ba743032d80278b497fbac7c2fcdd.oggvorbisstr"
+
+[deps]
+
+source_file="res://sadx out/bgm/evtbgm04.ogg"
+dest_files=["res://.godot/imported/evtbgm04.ogg-bf5ba743032d80278b497fbac7c2fcdd.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

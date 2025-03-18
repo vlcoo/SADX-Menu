@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dut2ap50od18t"
+path="res://.godot/imported/lstwrld1.wav-5cdb3a652b63f7b44bc4df0127b1b72b.sample"
+
+[deps]
+
+source_file="res://sadx out/bgm/lstwrld1.wav"
+dest_files=["res://.godot/imported/lstwrld1.wav-5cdb3a652b63f7b44bc4df0127b1b72b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

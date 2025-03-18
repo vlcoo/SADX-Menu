@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://jbu5741bg0fd"
+path="res://.godot/imported/fishing.ogg-0c7b336a332f22efe67a8dc5b4edc03f.oggvorbisstr"
+
+[deps]
+
+source_file="res://sadx out/bgm/fishing.ogg"
+dest_files=["res://.godot/imported/fishing.ogg-0c7b336a332f22efe67a8dc5b4edc03f.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

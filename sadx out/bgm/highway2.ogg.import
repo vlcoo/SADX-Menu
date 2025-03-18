@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://teynlbx1pb68"
+path="res://.godot/imported/highway2.ogg-d2480630140189b37c7f5b10df7f9a1f.oggvorbisstr"
+
+[deps]
+
+source_file="res://sadx out/bgm/highway2.ogg"
+dest_files=["res://.godot/imported/highway2.ogg-d2480630140189b37c7f5b10df7f9a1f.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

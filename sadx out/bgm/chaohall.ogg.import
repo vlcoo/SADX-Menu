@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c4cwbufwbtwvx"
+path="res://.godot/imported/chaohall.ogg-d8cb9c4f6e3dc29dd6e777f01ae658d3.oggvorbisstr"
+
+[deps]
+
+source_file="res://sadx out/bgm/chaohall.ogg"
+dest_files=["res://.godot/imported/chaohall.ogg-d8cb9c4f6e3dc29dd6e777f01ae658d3.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

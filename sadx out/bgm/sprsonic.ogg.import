@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cga2gk24ycch5"
+path="res://.godot/imported/sprsonic.ogg-1f82f31ea7269214cb730a69260ec6ee.oggvorbisstr"
+
+[deps]
+
+source_file="res://sadx out/bgm/sprsonic.ogg"
+dest_files=["res://.godot/imported/sprsonic.ogg-1f82f31ea7269214cb730a69260ec6ee.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

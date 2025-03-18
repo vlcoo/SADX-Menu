@@ -1,0 +1,86 @@
+[gd_scene load_steps=6 format=3 uid="uid://mxpx0gete6aa"]
+
+[ext_resource type="Texture2D" uid="uid://c3h5ip0yifot0" path="res://sadx out/AVA_SQUARE_HD/button_select.png" id="1_jct6t"]
+[ext_resource type="Script" uid="uid://sgjmb7ui4k2y" path="res://components/focus.gd" id="2_13qy3"]
+
+[sub_resource type="Animation" id="Animation_7rhqm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_db0o6"]
+resource_name = "enter"
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(2, 1),
+"update": 0,
+"values": [Vector2(2, 2), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 1),
+"transitions": PackedFloat32Array(0, 2, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.392157), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ievsc"]
+_data = {
+&"RESET": SubResource("Animation_7rhqm"),
+&"enter": SubResource("Animation_db0o6")
+}
+
+[node name="RectangleFocus" type="TextureRect"]
+self_modulate = Color(0.92549, 0.596078, 0, 1)
+z_index = 2
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(320, 240)
+texture = ExtResource("1_jct6t")
+expand_mode = 1
+script = ExtResource("2_13qy3")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_ievsc")
+}
+speed_scale = 4.0
+
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]

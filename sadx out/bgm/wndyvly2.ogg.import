@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ban5q0mm33y2f"
+path="res://.godot/imported/wndyvly2.ogg-f0b97231c52bcfff5454f90cfb38d3fc.oggvorbisstr"
+
+[deps]
+
+source_file="res://sadx out/bgm/wndyvly2.ogg"
+dest_files=["res://.godot/imported/wndyvly2.ogg-f0b97231c52bcfff5454f90cfb38d3fc.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

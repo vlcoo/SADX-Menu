@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c7v7bduubtbyd"
+path="res://.godot/imported/chao_g_born_c.wav-2fa2ff4a08363cca6175d097177919e9.sample"
+
+[deps]
+
+source_file="res://sadx out/bgm/chao_g_born_c.wav"
+dest_files=["res://.godot/imported/chao_g_born_c.wav-2fa2ff4a08363cca6175d097177919e9.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

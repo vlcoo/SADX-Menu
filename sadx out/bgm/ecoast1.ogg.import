@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b383w63lk7eje"
+path="res://.godot/imported/ecoast1.ogg-900a249cb45a6644fcc7ae578db4add2.oggvorbisstr"
+
+[deps]
+
+source_file="res://sadx out/bgm/ecoast1.ogg"
+dest_files=["res://.godot/imported/ecoast1.ogg-900a249cb45a6644fcc7ae578db4add2.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

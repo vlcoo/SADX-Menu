@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b5ftkxmwlimcr"
+path="res://.godot/imported/scramble.ogg-8495a503202b35ad7d5f905baa03a10b.oggvorbisstr"
+
+[deps]
+
+source_file="res://sadx out/bgm/scramble.ogg"
+dest_files=["res://.godot/imported/scramble.ogg-8495a503202b35ad7d5f905baa03a10b.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

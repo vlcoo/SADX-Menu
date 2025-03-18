@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dsr68v7hgv8rb"
+path="res://.godot/imported/advmiles.ogg-23a4249c031ed84bec870d26ad10a115.oggvorbisstr"
+
+[deps]
+
+source_file="res://sadx out/bgm/advmiles.ogg"
+dest_files=["res://.godot/imported/advmiles.ogg-23a4249c031ed84bec870d26ad10a115.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

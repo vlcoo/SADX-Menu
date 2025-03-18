@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://d1igy3pkd47ms"
+path="res://.godot/imported/chaos_p2.ogg-d7e9e0940c264d4573f86899c525f463.oggvorbisstr"
+
+[deps]
+
+source_file="res://sadx out/bgm/chaos_p2.ogg"
+dest_files=["res://.godot/imported/chaos_p2.ogg-d7e9e0940c264d4573f86899c525f463.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

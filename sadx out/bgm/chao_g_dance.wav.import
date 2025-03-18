@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cyrew7xl57rfc"
+path="res://.godot/imported/chao_g_dance.wav-a52e24e88e72f5f44f7d9fe51feefe98.sample"
+
+[deps]
+
+source_file="res://sadx out/bgm/chao_g_dance.wav"
+dest_files=["res://.godot/imported/chao_g_dance.wav-a52e24e88e72f5f44f7d9fe51feefe98.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

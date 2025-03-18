@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ciov1u62rlj37"
+path="res://.godot/imported/advmiles.wav-dbef0d5d1a4bf5862af0a350b21c7e8e.sample"
+
+[deps]
+
+source_file="res://sadx out/bgm/advmiles.wav"
+dest_files=["res://.godot/imported/advmiles.wav-dbef0d5d1a4bf5862af0a350b21c7e8e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

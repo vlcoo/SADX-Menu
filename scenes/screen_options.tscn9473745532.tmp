@@ -1,0 +1,646 @@
+[gd_scene load_steps=45 format=3 uid="uid://c04uns7pw8k5g"]
+
+[ext_resource type="Script" uid="uid://cfxps151rtgo6" path="res://scenes/screen_options.gd" id="1_hnq7k"]
+[ext_resource type="Texture2D" uid="uid://bafrbsn0lik63" path="res://sadx out/ad_back_c.webp" id="1_rwryf"]
+[ext_resource type="FontFile" uid="uid://bqfgjjocebx3" path="res://sadx out/font/Roboto-Italic-VariableFont_wdth,wght.ttf" id="2_2wpci"]
+[ext_resource type="Texture2D" uid="uid://cu16hosjh4hll" path="res://sadx out/AVA_OPTION_E_HD/op_lang_sitaji1.png" id="3_87p4l"]
+[ext_resource type="PackedScene" uid="uid://c2ap26y0tg5af" path="res://components/rectangle_button.tscn" id="3_l1mpm"]
+[ext_resource type="Texture2D" uid="uid://bn4uh8266axlm" path="res://sadx out/AVA_OPTION_E_HD/op_test_sitaji.png" id="3_mnlld"]
+[ext_resource type="FontFile" uid="uid://2ru8kn45as4h" path="res://sadx out/font/Roboto-VariableFont_wdth,wght.ttf" id="4_a2b45"]
+[ext_resource type="Texture2D" uid="uid://b14b0doo237nl" path="res://sadx out/AVA_OPTION_E_HD/op_test_cd1.png" id="4_el7h5"]
+[ext_resource type="Texture2D" uid="uid://cr5vp7okvskte" path="res://sadx out/AVA_OPTION_E_HD/op_lang_sitaji2.png" id="4_ik70f"]
+[ext_resource type="Texture2D" uid="uid://cvx3srxmgbhna" path="res://sadx out/AVA_OPTION_E_HD/op_lang_sitaji.png" id="5_drq2k"]
+[ext_resource type="Texture2D" uid="uid://cqthk357ya5ha" path="res://sadx out/AVA_OPTION_E_HD/op_test_cd2.png" id="5_g63ff"]
+[ext_resource type="Texture2D" uid="uid://mkjdlx1xc0p6" path="res://sadx out/AVA_OPTION_E_HD/op_test_onpu.png" id="6_jh1nq"]
+[ext_resource type="Texture2D" uid="uid://ccqe5fqfaxngd" path="res://sadx out/AVA_OPTION_E_HD/op_ms_sitaji.png" id="7_jh1nq"]
+[ext_resource type="Texture2D" uid="uid://ds7fihhutekfs" path="res://sadx out/AVA_OPTION_E_HD/op_ms_sonic1.png" id="8_d3ebj"]
+[ext_resource type="Texture2D" uid="uid://co4qw124hbiqi" path="res://sadx out/AVA_OPTION_E_HD/op_ms_sonic2.png" id="9_waxcx"]
+[ext_resource type="Texture2D" uid="uid://crki0f0kpd56y" path="res://sadx out/AVA_OPTION_E_HD/op_out_sitaji.png" id="15_dva8u"]
+[ext_resource type="Texture2D" uid="uid://xkgj5ya2yh0v" path="res://sadx out/AVA_OPTION_E_HD/op_out_speker.png" id="16_ckk36"]
+[ext_resource type="Texture2D" uid="uid://fgrgohbu83y0" path="res://sadx out/AVA_OPTION_E_HD/op_tv_sitaji.png" id="16_nfe88"]
+[ext_resource type="Texture2D" uid="uid://d3ls6yqx0gbtk" path="res://sadx out/AVA_OPTION_E_HD/save_01.png" id="17_11pgn"]
+[ext_resource type="Texture2D" uid="uid://bsvsab71gldvl" path="res://sadx out/AVA_OPTION_E_HD/op_tv_sitaji1.png" id="17_ckk36"]
+[ext_resource type="Texture2D" uid="uid://didit8b14v5vq" path="res://sadx out/AVA_OPTION_E_HD/op_tv_sitaji2.png" id="18_11pgn"]
+[ext_resource type="AudioStream" uid="uid://byx71hujo1r6d" path="res://sadx out/bgm/option.ogg" id="21_11pgn"]
+[ext_resource type="AudioStream" uid="uid://doqah68eermit" path="res://sadx out/VOICE_US/0014.wav" id="23_qhqr2"]
+[ext_resource type="PackedScene" uid="uid://cykomhofgiy7e" path="res://components/button_dialog.tscn" id="24_5r6a4"]
+
+[sub_resource type="Gradient" id="Gradient_l1mpm"]
+offsets = PackedFloat32Array(0, 0.746094)
+colors = PackedColorArray(0, 0.529688, 0.0993163, 1, 0, 0.439216, 0.0823529, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_a2b45"]
+gradient = SubResource("Gradient_l1mpm")
+
+[sub_resource type="FontVariation" id="FontVariation_ck2tf"]
+base_font = ExtResource("2_2wpci")
+variation_opentype = {
+2003072104: 100,
+2003265652: 900
+}
+variation_embolden = 0.3
+variation_transform = Transform2D(1.1, 0, 0, 1, 0, 0)
+spacing_glyph = 2
+
+[sub_resource type="LabelSettings" id="LabelSettings_87p4l"]
+font = SubResource("FontVariation_ck2tf")
+font_size = 30
+outline_size = 7
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ik70f"]
+bg_color = Color(0.0745098, 0.447059, 0.815686, 0.411765)
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_right = 18
+corner_radius_bottom_left = 18
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_d3ebj"]
+frames = 2
+speed_scale = 3.0
+frame_0/texture = ExtResource("4_el7h5")
+frame_0/duration = 0.2
+frame_1/texture = ExtResource("5_g63ff")
+frame_1/duration = 0.2
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_qhqr2"]
+frames = 2
+frame_0/texture = ExtResource("8_d3ebj")
+frame_0/duration = 0.5
+frame_1/texture = ExtResource("9_waxcx")
+frame_1/duration = 0.5
+
+[sub_resource type="FontVariation" id="FontVariation_v3ysq"]
+base_font = ExtResource("4_a2b45")
+variation_opentype = {
+2003072104: 100,
+2003265652: 800
+}
+variation_transform = Transform2D(1, 0, 0, 0.85, 0, 0)
+
+[sub_resource type="LabelSettings" id="LabelSettings_dva8u"]
+font = SubResource("FontVariation_v3ysq")
+font_size = 18
+font_color = Color(0, 0.030132, 0.876562, 1)
+
+[sub_resource type="Animation" id="Animation_ckk36"]
+resource_name = "appear"
+length = 3.5
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:visible_characters")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6]
+}
+
+[sub_resource type="Animation" id="Animation_qhqr2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:visible_characters")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [6]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5r6a4"]
+_data = {
+&"RESET": SubResource("Animation_qhqr2"),
+&"appear": SubResource("Animation_ckk36")
+}
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_mnlld"]
+frames = 3
+frame_0/texture = ExtResource("3_87p4l")
+frame_0/duration = 0.2
+frame_1/texture = ExtResource("4_ik70f")
+frame_1/duration = 0.2
+frame_2/texture = ExtResource("5_drq2k")
+frame_2/duration = 0.2
+
+[sub_resource type="FontVariation" id="FontVariation_vvtcd"]
+base_font = ExtResource("4_a2b45")
+variation_opentype = {
+2003072104: 100,
+2003265652: 600
+}
+spacing_top = 1
+
+[sub_resource type="LabelSettings" id="LabelSettings_ck2tf"]
+font = SubResource("FontVariation_vvtcd")
+font_size = 18
+
+[sub_resource type="LabelSettings" id="LabelSettings_el7h5"]
+font = SubResource("FontVariation_vvtcd")
+
+[sub_resource type="Animation" id="Animation_11pgn"]
+resource_name = "waving"
+length = 0.5
+loop_mode = 2
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.2, 1.2)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect2:scale")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.2, 1.2)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TextureRect3:scale")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.2, 1.2)]
+}
+
+[sub_resource type="Animation" id="Animation_hnq7k"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect2:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TextureRect3:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qhqr2"]
+_data = {
+&"RESET": SubResource("Animation_hnq7k"),
+&"waving": SubResource("Animation_11pgn")
+}
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_hnq7k"]
+frames = 4
+frame_0/texture = ExtResource("16_nfe88")
+frame_0/duration = 0.6
+frame_1/texture = ExtResource("17_ckk36")
+frame_1/duration = 0.15
+frame_2/texture = ExtResource("18_11pgn")
+frame_2/duration = 0.15
+frame_3/texture = ExtResource("17_ckk36")
+frame_3/duration = 0.15
+
+[node name="ScreenOptions" type="Control" node_paths=PackedStringArray("focus_on_enter")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_hnq7k")
+focus_on_enter = NodePath("PanelContainer/VBoxContainer/GridContainer/ButtonSoundTest")
+metadata/_edit_lock_ = true
+
+[node name="BG" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_rwryf")
+expand_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 40.0
+offset_bottom = 88.0
+grow_horizontal = 2
+texture = SubResource("GradientTexture1D_a2b45")
+
+[node name="Label" type="Label" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Options"
+label_settings = SubResource("LabelSettings_87p4l")
+vertical_alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 72.0
+offset_top = 96.0
+offset_right = -72.0
+offset_bottom = -88.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ik70f")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = -6
+
+[node name="GridContainer" type="GridContainer" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_constants/h_separation = -20
+theme_override_constants/v_separation = -2
+columns = 3
+
+[node name="TextureRect2" type="TextureRect" parent="PanelContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(104, 104)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture = ExtResource("3_mnlld")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/GridContainer/TextureRect2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 55.0
+offset_right = -22.0
+offset_bottom = -13.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AnimatedTexture_d3ebj")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect2" type="TextureRect" parent="PanelContainer/VBoxContainer/GridContainer/TextureRect2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 11.0
+offset_top = 12.0
+offset_right = -21.0
+offset_bottom = -32.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_jh1nq")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(104, 104)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture = ExtResource("7_jh1nq")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/GridContainer/TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 28.0
+offset_top = 41.0
+offset_right = -10.0
+offset_bottom = -9.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AnimatedTexture_qhqr2")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/GridContainer/TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = 11.0
+offset_right = -29.0
+offset_bottom = -71.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "SONCI!"
+label_settings = SubResource("LabelSettings_dva8u")
+vertical_alignment = 1
+visible_characters = 6
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PanelContainer/VBoxContainer/GridContainer/TextureRect"]
+libraries = {
+&"": SubResource("AnimationLibrary_5r6a4")
+}
+autoplay = "appear"
+
+[node name="TextureRect6" type="TextureRect" parent="PanelContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(104, 104)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture = SubResource("AnimatedTexture_mnlld")
+expand_mode = 1
+
+[node name="ButtonSoundTest" parent="PanelContainer/VBoxContainer/GridContainer" instance=ExtResource("3_l1mpm")]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+
+[node name="Label2" type="Label" parent="PanelContainer/VBoxContainer/GridContainer/ButtonSoundTest"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Sound Test"
+label_settings = SubResource("LabelSettings_ck2tf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ButtonMsgSettings" parent="PanelContainer/VBoxContainer/GridContainer" instance=ExtResource("3_l1mpm")]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+
+[node name="Label2" type="Label" parent="PanelContainer/VBoxContainer/GridContainer/ButtonMsgSettings"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Message Settings"
+label_settings = SubResource("LabelSettings_el7h5")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ButtonLanguage" parent="PanelContainer/VBoxContainer/GridContainer" instance=ExtResource("3_l1mpm")]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+
+[node name="Label2" type="Label" parent="PanelContainer/VBoxContainer/GridContainer/ButtonLanguage"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Language"
+label_settings = SubResource("LabelSettings_ck2tf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GridContainer2" type="GridContainer" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_constants/h_separation = -20
+theme_override_constants/v_separation = -2
+columns = 3
+
+[node name="TextureRect5" type="TextureRect" parent="PanelContainer/VBoxContainer/GridContainer2"]
+custom_minimum_size = Vector2(104, 104)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture = ExtResource("15_dva8u")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/GridContainer2/TextureRect5"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 19.639
+offset_top = 8.63898
+offset_right = -37.361
+offset_bottom = -55.361
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(23.361, 20.361)
+texture = ExtResource("16_ckk36")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect2" type="TextureRect" parent="PanelContainer/VBoxContainer/GridContainer2/TextureRect5"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 35.8195
+offset_top = 49.8195
+offset_right = -41.1805
+offset_bottom = -20.1805
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(13.1805, 17.1805)
+texture = ExtResource("16_ckk36")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect3" type="TextureRect" parent="PanelContainer/VBoxContainer/GridContainer2/TextureRect5"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = 45.9097
+offset_right = -64.0
+offset_bottom = -42.0903
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(8, 8.09027)
+texture = ExtResource("16_ckk36")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PanelContainer/VBoxContainer/GridContainer2/TextureRect5"]
+libraries = {
+&"": SubResource("AnimationLibrary_qhqr2")
+}
+autoplay = "waving"
+speed_scale = 1.5
+
+[node name="TextureRect4" type="TextureRect" parent="PanelContainer/VBoxContainer/GridContainer2"]
+custom_minimum_size = Vector2(104, 104)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture = ExtResource("17_11pgn")
+expand_mode = 1
+
+[node name="TextureRect3" type="TextureRect" parent="PanelContainer/VBoxContainer/GridContainer2"]
+custom_minimum_size = Vector2(104, 104)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture = SubResource("AnimatedTexture_hnq7k")
+expand_mode = 1
+
+[node name="ButtonSound" parent="PanelContainer/VBoxContainer/GridContainer2" instance=ExtResource("3_l1mpm")]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+
+[node name="Label2" type="Label" parent="PanelContainer/VBoxContainer/GridContainer2/ButtonSound"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Sound Output"
+label_settings = SubResource("LabelSettings_ck2tf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ButtonFile" parent="PanelContainer/VBoxContainer/GridContainer2" instance=ExtResource("3_l1mpm")]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+
+[node name="Label2" type="Label" parent="PanelContainer/VBoxContainer/GridContainer2/ButtonFile"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "File Change"
+label_settings = SubResource("LabelSettings_ck2tf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ButtonTV" parent="PanelContainer/VBoxContainer/GridContainer2" instance=ExtResource("3_l1mpm")]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+
+[node name="Label2" type="Label" parent="PanelContainer/VBoxContainer/GridContainer2/ButtonTV"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "TV Setting"
+label_settings = SubResource("LabelSettings_ck2tf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RectangleButton" parent="." instance=ExtResource("3_l1mpm")]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -96.0
+offset_top = -72.0
+offset_right = 96.0
+offset_bottom = -48.0
+grow_horizontal = 2
+grow_vertical = 0
+pivot_offset = Vector2(96, 12)
+is_positive = false
+
+[node name="Label2" type="Label" parent="RectangleButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "To Main Menu"
+label_settings = SubResource("LabelSettings_ck2tf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("21_11pgn")
+autoplay = true
+bus = &"Music"
+
+[node name="AudioVoice" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("23_qhqr2")
+autoplay = true
+bus = &"Voice"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ButtonDialog" parent="CanvasLayer" instance=ExtResource("24_5r6a4")]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -88.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[connection signal="pressed" from="PanelContainer/VBoxContainer/GridContainer/ButtonSoundTest" to="." method="_on_button_sound_test_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/GridContainer/ButtonLanguage" to="." method="_on_rectangle_button_3_pressed"]

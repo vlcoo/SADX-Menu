@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://j5yeomvnsaeh"
+path="res://.godot/imported/bosse101.ogg-abc580fb0fa9750ce634ddfbb32bcaae.oggvorbisstr"
+
+[deps]
+
+source_file="res://sadx out/bgm/bosse101.ogg"
+dest_files=["res://.godot/imported/bosse101.ogg-abc580fb0fa9750ce634ddfbb32bcaae.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

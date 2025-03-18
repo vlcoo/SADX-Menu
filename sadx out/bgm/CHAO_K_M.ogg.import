@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://beytcgh52jca2"
+path="res://.godot/imported/CHAO_K_M.ogg-0fde301c5b55afc204aef8446fb023ba.oggvorbisstr"
+
+[deps]
+
+source_file="res://sadx out/bgm/CHAO_K_M.ogg"
+dest_files=["res://.godot/imported/CHAO_K_M.ogg-0fde301c5b55afc204aef8446fb023ba.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

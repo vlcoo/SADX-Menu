@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bcnfdgtx432we"
+path="res://.godot/imported/advamy.ogg-9c79776aff23be21ab786e3a690a8f40.oggvorbisstr"
+
+[deps]
+
+source_file="res://sadx out/bgm/advamy.ogg"
+dest_files=["res://.godot/imported/advamy.ogg-9c79776aff23be21ab786e3a690a8f40.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

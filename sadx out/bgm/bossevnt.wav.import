@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://fojybu4k8dv6"
+path="res://.godot/imported/bossevnt.wav-1d6a6895a92d4370a27e7a58f5ed0d71.sample"
+
+[deps]
+
+source_file="res://sadx out/bgm/bossevnt.wav"
+dest_files=["res://.godot/imported/bossevnt.wav-1d6a6895a92d4370a27e7a58f5ed0d71.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bkm525g3wilmm"
+path="res://.godot/imported/lstwrld3.ogg-d513d1ca81a75b726137462e5873498e.oggvorbisstr"
+
+[deps]
+
+source_file="res://sadx out/bgm/lstwrld3.ogg"
+dest_files=["res://.godot/imported/lstwrld3.ogg-d513d1ca81a75b726137462e5873498e.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c266s0lxq1moc"
+path="res://.godot/imported/continue.wav-74bf0d5e1f33afe2da3c0df821cca5c6.sample"
+
+[deps]
+
+source_file="res://sadx out/bgm/continue.wav"
+dest_files=["res://.godot/imported/continue.wav-74bf0d5e1f33afe2da3c0df821cca5c6.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

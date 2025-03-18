@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c7wfxjd61ey7h"
+path="res://.godot/imported/casino1.ogg-1ae6461be629666ead6926a3513d5f58.oggvorbisstr"
+
+[deps]
+
+source_file="res://sadx out/bgm/casino1.ogg"
+dest_files=["res://.godot/imported/casino1.ogg-1ae6461be629666ead6926a3513d5f58.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

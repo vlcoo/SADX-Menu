@@ -1,0 +1,124 @@
+[gd_scene load_steps=11 format=3 uid="uid://b0d4sp4tmo32o"]
+
+[ext_resource type="Texture2D" uid="uid://cxt8122bpwys2" path="res://sadx out/AVA_CSR_HD/sphe_7.png" id="1_o4kb5"]
+[ext_resource type="Texture2D" uid="uid://b8hoafdgxs0x" path="res://sadx out/AVA_CSR_HD/sphe_6.png" id="2_4wjwm"]
+[ext_resource type="Script" uid="uid://v0dklnwwk228" path="res://components/button.gd" id="2_jldi0"]
+[ext_resource type="PackedScene" uid="uid://crrky6xqj5jnw" path="res://components/circle_focus.tscn" id="3_o4kb5"]
+[ext_resource type="FontFile" uid="uid://2ru8kn45as4h" path="res://sadx out/font/Roboto-VariableFont_wdth,wght.ttf" id="4_ieq88"]
+
+[sub_resource type="Animation" id="Animation_xicbb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureBG:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_p0le0"]
+resource_name = "focus_flash"
+length = 0.75
+loop_mode = 2
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureBG:self_modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.75),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 1, 1), Color(1, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4wjwm"]
+_data = {
+&"RESET": SubResource("Animation_xicbb"),
+&"focus_flash": SubResource("Animation_p0le0")
+}
+
+[sub_resource type="FontVariation" id="FontVariation_ocp2o"]
+base_font = ExtResource("4_ieq88")
+variation_opentype = {
+2003072104: 100,
+2003265652: 600
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_4wjwm"]
+font = SubResource("FontVariation_ocp2o")
+font_size = 18
+
+[node name="CircleButton" type="TextureButton"]
+self_modulate = Color(0, 0, 1, 1)
+custom_minimum_size = Vector2(104, 56)
+offset_right = 104.0
+offset_bottom = 56.0
+pivot_offset = Vector2(52, 28)
+script = ExtResource("2_jldi0")
+grow_when_focused = true
+
+[node name="Focus" parent="." instance=ExtResource("3_o4kb5")]
+visible = false
+z_index = 2
+layout_mode = 1
+offset_left = -16.0
+offset_top = -8.0
+offset_right = 16.0
+offset_bottom = 8.0
+pivot_offset = Vector2(52, 28)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_4wjwm")
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+bus = &"SFX"
+
+[node name="TextureBG" type="TextureRect" parent="."]
+self_modulate = Color(0, 0, 1, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(52, 28)
+texture = ExtResource("1_o4kb5")
+expand_mode = 1
+
+[node name="Highlight" type="TextureRect" parent="TextureBG"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(52, 28)
+texture = ExtResource("2_4wjwm")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="TextureBG"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(52, 28)
+text = "English"
+label_settings = SubResource("LabelSettings_4wjwm")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="focus_entered" from="." to="." method="_on_focus_entered"]
+[connection signal="focus_exited" from="." to="." method="_on_focus_exited"]
+[connection signal="pressed" from="." to="." method="_on_pressed"]

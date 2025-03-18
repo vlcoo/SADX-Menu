@@ -1,0 +1,117 @@
+[gd_scene load_steps=11 format=3 uid="uid://qws7bvnrkuqh"]
+
+[ext_resource type="Texture2D" uid="uid://bqtvmjhld4t3g" path="res://sadx out/AVA_VMSSEL_E/ms_dc_vms.png" id="1_okx2l"]
+[ext_resource type="Script" uid="uid://v0dklnwwk228" path="res://components/button.gd" id="2_okx2l"]
+[ext_resource type="PackedScene" uid="uid://mxpx0gete6aa" path="res://components/rectangle_focus.tscn" id="3_codxy"]
+[ext_resource type="Texture2D" uid="uid://d0mh0jpwqttmk" path="res://sadx out/AVA_VMSSEL_E/ms_select.png" id="4_codxy"]
+[ext_resource type="FontFile" uid="uid://2ru8kn45as4h" path="res://sadx out/font/Roboto-VariableFont_wdth,wght.ttf" id="5_codxy"]
+
+[sub_resource type="FontVariation" id="FontVariation_5ntux"]
+base_font = ExtResource("5_codxy")
+variation_opentype = {
+2003072104: 100,
+2003265652: 800
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_0dmho"]
+font = SubResource("FontVariation_5ntux")
+font_size = 42
+
+[sub_resource type="Animation" id="Animation_codxy"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RectangleFocus:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.92549, 0.596078, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_5ntux"]
+resource_name = "focus_flash"
+length = 0.8
+loop_mode = 2
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RectangleFocus:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 0.871875, 0, 1), Color(0.92549, 0.596078, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0dmho"]
+_data = {
+&"RESET": SubResource("Animation_codxy"),
+&"focus_flash": SubResource("Animation_5ntux")
+}
+
+[node name="VmuButton" type="TextureButton"]
+custom_minimum_size = Vector2(83, 123)
+offset_right = 83.0
+offset_bottom = 123.0
+pivot_offset = Vector2(42, 62)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+script = ExtResource("2_okx2l")
+grow_when_focused = true
+
+[node name="TextureBG" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(42, 62)
+texture = ExtResource("1_okx2l")
+
+[node name="RectangleFocus" parent="." instance=ExtResource("3_codxy")]
+visible = false
+layout_mode = 1
+offset_left = 8.0
+offset_top = 25.0
+offset_right = -6.0
+offset_bottom = -38.0
+pivot_offset = Vector2(27, 23)
+texture = ExtResource("4_codxy")
+disable_animation = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 13.0
+offset_top = 30.0
+offset_right = -12.0
+offset_bottom = -44.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "1"
+label_settings = SubResource("LabelSettings_0dmho")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+bus = &"SFX"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_0dmho")
+}
+
+[connection signal="focus_entered" from="." to="." method="_on_focus_entered"]
+[connection signal="focus_exited" from="." to="." method="_on_focus_exited"]
+[connection signal="pressed" from="." to="." method="_on_pressed"]

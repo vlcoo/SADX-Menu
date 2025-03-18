@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bkeom4855np30"
+path="res://.godot/imported/skydeck1.ogg-b2d35b5696ca52bb049bb86374219325.oggvorbisstr"
+
+[deps]
+
+source_file="res://sadx out/bgm/skydeck1.ogg"
+dest_files=["res://.godot/imported/skydeck1.ogg-b2d35b5696ca52bb049bb86374219325.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

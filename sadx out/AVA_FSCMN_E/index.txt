@@ -1,0 +1,6 @@
+10000039,FS_FILE_e.png,128x32
+10000037,fs_file_modoru_e.png,32x32
+365239,fs_file_num1.png,32x64
+365240,fs_file_num2.png,32x64
+365241,fs_file_num3.png,32x64
+10000493,fs_modoru_e.png,64x32

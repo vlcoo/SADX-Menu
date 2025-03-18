@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dboie36c5lptc"
+path="res://.godot/imported/mainthem.ogg-40e2f547ddb9d796ed959f2d8649e0ab.oggvorbisstr"
+
+[deps]
+
+source_file="res://sadx out/bgm/mainthem.ogg"
+dest_files=["res://.godot/imported/mainthem.ogg-40e2f547ddb9d796ed959f2d8649e0ab.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

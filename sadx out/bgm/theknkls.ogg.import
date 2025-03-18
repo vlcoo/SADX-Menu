@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dy25ondxwulaw"
+path="res://.godot/imported/theknkls.ogg-c4a15ba36a3bf85655068ccda670b666.oggvorbisstr"
+
+[deps]
+
+source_file="res://sadx out/bgm/theknkls.ogg"
+dest_files=["res://.godot/imported/theknkls.ogg-c4a15ba36a3bf85655068ccda670b666.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

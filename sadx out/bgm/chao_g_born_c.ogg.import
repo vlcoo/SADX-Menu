@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://qjjwhch1c0wk"
+path="res://.godot/imported/chao_g_born_c.ogg-8c717fc6ff9039b2f5f8b98d9d70bbef.oggvorbisstr"
+
+[deps]
+
+source_file="res://sadx out/bgm/chao_g_born_c.ogg"
+dest_files=["res://.godot/imported/chao_g_born_c.ogg-8c717fc6ff9039b2f5f8b98d9d70bbef.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

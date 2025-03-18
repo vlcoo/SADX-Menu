@@ -1,0 +1,3 @@
+365142,button_s.png,256x64
+365160,button_s_s.png,256x64
+365159,button_select.png,256x64

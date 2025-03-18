@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://crvcug2v6sywl"
+path="res://.godot/imported/nights_k.ogg-96f590bedcd7f0184f5a5ebffaf49200.oggvorbisstr"
+
+[deps]
+
+source_file="res://sadx out/bgm/nights_k.ogg"
+dest_files=["res://.godot/imported/nights_k.ogg-96f590bedcd7f0184f5a5ebffaf49200.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

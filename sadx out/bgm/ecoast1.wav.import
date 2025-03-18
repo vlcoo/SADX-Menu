@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://csikk44js1or7"
+path="res://.godot/imported/ecoast1.wav-3dfa676b1ebc9f23c9d4a6ba7c9e7f4a.sample"
+
+[deps]
+
+source_file="res://sadx out/bgm/ecoast1.wav"
+dest_files=["res://.godot/imported/ecoast1.wav-3dfa676b1ebc9f23c9d4a6ba7c9e7f4a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

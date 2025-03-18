@@ -1,0 +1,10 @@
+365125,ms_b_kado.png,128x16
+365126,ms_b_naka.png,128x16
+365124,ms_button.png,128x32
+365111,MS_NUM1.png,32x32
+365112,MS_NUM2.png,32x32
+10000468,ms_port_a.png,128x16
+10000467,ms_port_b.png,128x16
+365123,ms_select.png,128x64
+10000446,MS_TX_e.png,512x32
+365120,ms_gc_vms.png,256x256

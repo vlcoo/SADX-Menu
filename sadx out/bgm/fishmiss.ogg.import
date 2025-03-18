@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bdbemp50jf2xt"
+path="res://.godot/imported/fishmiss.ogg-d54bfe44a697326b0dc58b0907e6ed89.oggvorbisstr"
+
+[deps]
+
+source_file="res://sadx out/bgm/fishmiss.ogg"
+dest_files=["res://.godot/imported/fishmiss.ogg-d54bfe44a697326b0dc58b0907e6ed89.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

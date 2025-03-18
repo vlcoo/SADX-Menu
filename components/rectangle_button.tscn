@@ -1,0 +1,80 @@
+[gd_scene load_steps=7 format=3 uid="uid://c2ap26y0tg5af"]
+
+[ext_resource type="Texture2D" uid="uid://btd213txlu8xj" path="res://sadx out/AVA_SQUARE_HD/button_s.png" id="1_on5rc"]
+[ext_resource type="Script" uid="uid://v0dklnwwk228" path="res://components/button.gd" id="2_on5rc"]
+[ext_resource type="PackedScene" uid="uid://mxpx0gete6aa" path="res://components/rectangle_focus.tscn" id="3_on5rc"]
+
+[sub_resource type="Animation" id="Animation_ghmwt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0.658824, 0.85098, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_32lqq"]
+resource_name = "focus_flash"
+length = 0.8
+loop_mode = 2
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0.658824, 0.85098, 1), Color(1, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1iwjb"]
+_data = {
+&"RESET": SubResource("Animation_ghmwt"),
+&"focus_flash": SubResource("Animation_32lqq")
+}
+
+[node name="RectangleButton" type="TextureButton"]
+self_modulate = Color(0, 0.658824, 0.85098, 1)
+custom_minimum_size = Vector2(144, 24)
+offset_right = 144.0
+offset_bottom = 24.0
+pivot_offset = Vector2(72, 12)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+texture_normal = ExtResource("1_on5rc")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("2_on5rc")
+
+[node name="Focus" parent="." instance=ExtResource("3_on5rc")]
+visible = false
+layout_mode = 1
+pivot_offset = Vector2(72, 12)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_1iwjb")
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+bus = &"SFX"
+
+[node name="TextureBG" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 12.0
+offset_bottom = 12.0
+
+[connection signal="focus_entered" from="." to="." method="_on_focus_entered"]
+[connection signal="focus_exited" from="." to="." method="_on_focus_exited"]
+[connection signal="pressed" from="." to="." method="_on_pressed"]

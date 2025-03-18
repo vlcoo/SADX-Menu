@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ccim4io4j0eo7"
+path="res://.godot/imported/B00_00_37.wav-daf5c48f26183b6cf0dd47bf6d68f859.sample"
+
+[deps]
+
+source_file="res://sadx out/COMMON_BANK00/B00_00_37.wav"
+dest_files=["res://.godot/imported/B00_00_37.wav-daf5c48f26183b6cf0dd47bf6d68f859.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
