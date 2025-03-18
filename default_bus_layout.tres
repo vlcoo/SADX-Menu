@@ -1,8 +1,17 @@
-[gd_resource type="AudioBusLayout" load_steps=2 format=3 uid="uid://bfl2y1rb6m60o"]
+[gd_resource type="AudioBusLayout" load_steps=3 format=3 uid="uid://bfl2y1rb6m60o"]
 
 [sub_resource type="AudioEffectHighPassFilter" id="AudioEffectHighPassFilter_j3pel"]
 resource_name = "HighPassFilter"
 cutoff_hz = 282.0
+
+[sub_resource type="AudioEffectEQ" id="AudioEffectEQ_j3pel"]
+resource_name = "EQ"
+band_db/32_hz = -17.4
+band_db/100_hz = -8.9
+band_db/320_hz = -5.8
+band_db/1000_hz = -6.8
+band_db/3200_hz = 2.6
+band_db/10000_hz = 9.5
 
 [resource]
 bus/0/volume_db = -6.11799
@@ -19,7 +28,9 @@ bus/2/bypass_fx = false
 bus/2/volume_db = -3.36741
 bus/2/send = &"Master"
 bus/2/effect/0/effect = SubResource("AudioEffectHighPassFilter_j3pel")
-bus/2/effect/0/enabled = true
+bus/2/effect/0/enabled = false
+bus/2/effect/1/effect = SubResource("AudioEffectEQ_j3pel")
+bus/2/effect/1/enabled = true
 bus/3/name = &"Music"
 bus/3/solo = false
 bus/3/mute = false

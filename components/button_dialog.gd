@@ -24,5 +24,5 @@ func appear() -> void:
 func disappear() -> void:
 	animation_player.play(&"out")
 	await animation_player.animation_finished
-	finished_disappearing.emit()
+	#finished_disappearing.emit()
 	visible = false

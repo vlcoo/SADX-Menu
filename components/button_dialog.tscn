@@ -22,7 +22,7 @@ script = ExtResource("1_48uw1")
 libraries = {
 &"": ExtResource("1_gj1yx")
 }
-speed_scale = 4.0
+speed_scale = 3.7
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 

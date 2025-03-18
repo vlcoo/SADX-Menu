@@ -257,7 +257,7 @@ spacing_bottom = -4
 font = SubResource("FontVariation_8bxch")
 font_size = 20
 
-[node name="ScreenOptions" type="Control" node_paths=PackedStringArray("focus_on_enter")]
+[node name="ScreenOptions" type="Control" node_paths=PackedStringArray("focus_on_enter", "bg")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -267,6 +267,8 @@ grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_hnq7k")
 focus_on_enter = NodePath("PanelContainer/VBoxContainer/GridContainer/ButtonSoundTest")
+bg = NodePath("BG")
+bg_fades = 3
 metadata/_edit_lock_ = true
 
 [node name="BG" type="TextureRect" parent="."]
@@ -280,7 +282,7 @@ texture = ExtResource("1_rwryf")
 expand_mode = 1
 metadata/_edit_lock_ = true
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="Header" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -289,7 +291,7 @@ offset_bottom = 88.0
 grow_horizontal = 2
 texture = SubResource("GradientTexture1D_a2b45")
 
-[node name="Label" type="Label" parent="TextureRect"]
+[node name="Label" type="Label" parent="Header"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -397,7 +399,7 @@ offset_right = -29.0
 offset_bottom = -71.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "SONCI!"
+text = "SONIC!"
 label_settings = SubResource("LabelSettings_dva8u")
 vertical_alignment = 1
 visible_characters = 6
@@ -605,7 +607,7 @@ label_settings = SubResource("LabelSettings_ck2tf")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="RectangleButton" parent="." instance=ExtResource("3_l1mpm")]
+[node name="ButtonExit" parent="." instance=ExtResource("3_l1mpm")]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -619,8 +621,9 @@ offset_bottom = -48.0
 grow_horizontal = 2
 grow_vertical = 0
 pivot_offset = Vector2(96, 12)
+confirm_type = 2
 
-[node name="Label2" type="Label" parent="RectangleButton"]
+[node name="Label2" type="Label" parent="ButtonExit"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -647,9 +650,9 @@ bus = &"Voice"
 [node name="DialogVoice" parent="CanvasLayer" node_paths=PackedStringArray("focus_on_appear") instance=ExtResource("24_5r6a4")]
 visible = false
 offset_left = 32.0
-offset_top = 328.0
+offset_top = 333.0
 offset_right = 608.0
-offset_bottom = 424.0
+offset_bottom = 429.0
 focus_on_appear = NodePath("VBoxContainer/HBoxContainer/ButtonVoiceEnglish")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/DialogVoice"]
@@ -682,13 +685,105 @@ size_flags_vertical = 4
 [node name="Label" parent="CanvasLayer/DialogVoice/VBoxContainer/HBoxContainer/ButtonVoiceJapanese/TextureBG" index="1"]
 text = "日本語"
 
+[node name="DialogText" parent="CanvasLayer" node_paths=PackedStringArray("focus_on_appear") instance=ExtResource("24_5r6a4")]
+visible = false
+offset_left = 32.0
+offset_top = 244.0
+offset_right = 608.0
+offset_bottom = 428.0
+pivot_offset = Vector2(288, 92)
+focus_on_appear = NodePath("VBoxContainer/HBoxContainer/ButtonVoiceEnglish")
+metadata/_edit_group_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/DialogText"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Label" type="Label" parent="CanvasLayer/DialogText/VBoxContainer"]
+custom_minimum_size = Vector2(0, 26)
+layout_mode = 2
+size_flags_vertical = 0
+text = "TEXT"
+label_settings = SubResource("LabelSettings_ocp2o")
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/DialogText/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/separation = -80
+alignment = 1
+
+[node name="ButtonVoiceEnglish" parent="CanvasLayer/DialogText/VBoxContainer/HBoxContainer" instance=ExtResource("25_8bxch")]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+focus_neighbor_right = NodePath("../ButtonJapanese")
+
+[node name="ButtonJapanese" parent="CanvasLayer/DialogText/VBoxContainer/HBoxContainer" instance=ExtResource("25_8bxch")]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+focus_neighbor_left = NodePath("../ButtonVoiceEnglish")
+focus_neighbor_right = NodePath("../ButtonGerman")
+focus_neighbor_bottom = NodePath("../../HBoxContainer2/ButtonSpanish")
+
+[node name="Label" parent="CanvasLayer/DialogText/VBoxContainer/HBoxContainer/ButtonJapanese/TextureBG" index="1"]
+text = "日本語"
+
+[node name="ButtonGerman" parent="CanvasLayer/DialogText/VBoxContainer/HBoxContainer" instance=ExtResource("25_8bxch")]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+focus_neighbor_left = NodePath("../ButtonJapanese")
+focus_neighbor_bottom = NodePath("../../HBoxContainer2/ButtonSpanish")
+
+[node name="Label" parent="CanvasLayer/DialogText/VBoxContainer/HBoxContainer/ButtonGerman/TextureBG" index="1"]
+text = "Deutsch"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer/DialogText/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/separation = -200
+alignment = 1
+
+[node name="ButtonFrench" parent="CanvasLayer/DialogText/VBoxContainer/HBoxContainer2" instance=ExtResource("25_8bxch")]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+focus_neighbor_top = NodePath("../../HBoxContainer/ButtonVoiceEnglish")
+focus_neighbor_right = NodePath("../ButtonSpanish")
+
+[node name="Label" parent="CanvasLayer/DialogText/VBoxContainer/HBoxContainer2/ButtonFrench/TextureBG" index="1"]
+text = "Français"
+
+[node name="ButtonSpanish" parent="CanvasLayer/DialogText/VBoxContainer/HBoxContainer2" instance=ExtResource("25_8bxch")]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+focus_neighbor_left = NodePath("../ButtonFrench")
+focus_neighbor_top = NodePath("../../HBoxContainer/ButtonJapanese")
+
+[node name="Label" parent="CanvasLayer/DialogText/VBoxContainer/HBoxContainer2/ButtonSpanish/TextureBG" index="1"]
+text = "Español"
+
 [connection signal="pressed" from="PanelContainer/VBoxContainer/GridContainer/ButtonSoundTest" to="." method="_on_button_sound_test_pressed"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/GridContainer/ButtonMsgSettings" to="." method="_on_button_msg_settings_pressed"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/GridContainer/ButtonLanguage" to="." method="_on_button_language_pressed"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/GridContainer2/ButtonSound" to="." method="_on_button_sound_pressed"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/GridContainer2/ButtonFile" to="." method="_on_button_file_pressed"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/GridContainer2/ButtonTV" to="." method="_on_button_tv_pressed"]
-[connection signal="pressed" from="CanvasLayer/DialogVoice/VBoxContainer/HBoxContainer/ButtonVoiceEnglish" to="." method="_on_button_voice_english_pressed"]
-[connection signal="pressed" from="CanvasLayer/DialogVoice/VBoxContainer/HBoxContainer/ButtonVoiceJapanese" to="." method="_on_button_voice_japanese_pressed"]
+[connection signal="pressed" from="ButtonExit" to="." method="_on_button_exit_pressed"]
+[connection signal="pressed" from="CanvasLayer/DialogVoice/VBoxContainer/HBoxContainer/ButtonVoiceEnglish" to="." method="_on_button_voice_pressed" binds= ["english"]]
+[connection signal="pressed" from="CanvasLayer/DialogVoice/VBoxContainer/HBoxContainer/ButtonVoiceJapanese" to="." method="_on_button_voice_pressed" binds= ["japanese"]]
+[connection signal="pressed" from="CanvasLayer/DialogText/VBoxContainer/HBoxContainer/ButtonVoiceEnglish" to="." method="_on_button_text_pressed" binds= ["english"]]
+[connection signal="pressed" from="CanvasLayer/DialogText/VBoxContainer/HBoxContainer/ButtonJapanese" to="." method="_on_button_text_pressed" binds= ["japanese"]]
+[connection signal="pressed" from="CanvasLayer/DialogText/VBoxContainer/HBoxContainer/ButtonGerman" to="." method="_on_button_text_pressed" binds= ["german"]]
+[connection signal="pressed" from="CanvasLayer/DialogText/VBoxContainer/HBoxContainer2/ButtonFrench" to="." method="_on_button_text_pressed" binds= ["french"]]
+[connection signal="pressed" from="CanvasLayer/DialogText/VBoxContainer/HBoxContainer2/ButtonSpanish" to="." method="_on_button_text_pressed" binds= ["spanish"]]
 
 [editable path="CanvasLayer/DialogVoice/VBoxContainer/HBoxContainer/ButtonVoiceJapanese"]
+[editable path="CanvasLayer/DialogText/VBoxContainer/HBoxContainer/ButtonJapanese"]
+[editable path="CanvasLayer/DialogText/VBoxContainer/HBoxContainer/ButtonGerman"]
+[editable path="CanvasLayer/DialogText/VBoxContainer/HBoxContainer2/ButtonFrench"]
+[editable path="CanvasLayer/DialogText/VBoxContainer/HBoxContainer2/ButtonSpanish"]

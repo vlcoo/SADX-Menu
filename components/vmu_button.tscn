@@ -22,7 +22,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("RectangleFocus:self_modulate")
+tracks/0/path = NodePath("Focus:self_modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -40,7 +40,7 @@ step = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("RectangleFocus:self_modulate")
+tracks/0/path = NodePath("Focus:self_modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -77,7 +77,7 @@ grow_vertical = 2
 pivot_offset = Vector2(42, 62)
 texture = ExtResource("1_okx2l")
 
-[node name="RectangleFocus" parent="." instance=ExtResource("3_codxy")]
+[node name="Focus" parent="." instance=ExtResource("3_codxy")]
 visible = false
 layout_mode = 1
 offset_left = 8.0

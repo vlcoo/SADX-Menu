@@ -20,5 +20,4 @@ func _on_visibility_changed() -> void:
 	if not is_node_ready(): return
 	
 	if visible and not parent_control.focus_immediately:
-		print(parent_control.focus_immediately)
 		animation_player.play(&"enter")

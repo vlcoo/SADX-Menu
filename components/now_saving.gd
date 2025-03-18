@@ -1,0 +1,26 @@
+extends CanvasLayer
+
+@onready var bar: TextureProgressBar = $TextureProgressBar
+@onready var timer: Timer = $Timer
+
+signal finished_saving
+
+
+func _ready() -> void:
+	visible = false
+
+
+func appear() -> void:
+	visible = true
+	bar.value = 0
+	while bar.value < bar.max_value:
+		var rand_wait_time = min(randf() / (bar.value * 0.2 + 0.1), 1)
+		var rand_value_increase = min(abs(rand_wait_time * 4), 3)
+		if bar.value > 0.5:
+			rand_wait_time *= 0.5
+			rand_value_increase *= 0.5
+		timer.start(rand_wait_time)
+		bar.value += rand_value_increase
+		await timer.timeout
+	visible = false
+	finished_saving.emit()

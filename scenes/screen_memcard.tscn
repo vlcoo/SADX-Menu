@@ -56,7 +56,7 @@ variation_opentype = {
 font = SubResource("FontVariation_qpgop")
 font_size = 18
 
-[node name="ScreenMemard" type="Control" node_paths=PackedStringArray("focus_on_enter")]
+[node name="ScreenMemard" type="Control" node_paths=PackedStringArray("focus_on_enter", "bg")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -66,6 +66,8 @@ grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_npbpi")
 focus_on_enter = NodePath("HBoxContainer/TextureRect2/TextureRect3/TextureRect2/VBoxContainer/VmuButton")
+bg = NodePath("BG")
+bg_fades = 3
 metadata/_edit_lock_ = true
 
 [node name="BG" type="TextureRect" parent="."]
@@ -337,5 +339,8 @@ label_settings = SubResource("LabelSettings_v8vjv")
 horizontal_alignment = 1
 vertical_alignment = 1
 justification_flags = 162
+
+[connection signal="pressed" from="HBoxContainer/TextureRect2/TextureRect3/TextureRect2/VBoxContainer/VmuButton" to="." method="_on_vmu_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/TextureRect2/TextureRect3/TextureRect2/VBoxContainer/VmuButton2" to="." method="_on_vmu_button_2_pressed"]
 
 [editable path="HBoxContainer/TextureRect2/TextureRect3/TextureRect2/VBoxContainer/VmuButton2"]

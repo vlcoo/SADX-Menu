@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://c7y2i08qmraeo"]
+
+[ext_resource type="Script" uid="uid://d3l0elk5q3kvy" path="res://components/now_saving.gd" id="1_dmmod"]
+[ext_resource type="Texture2D" uid="uid://dui0ivjimyp1" path="res://sadx out/sav.png" id="2_ups70"]
+
+[node name="NowSaving" type="CanvasLayer"]
+layer = 3
+script = ExtResource("1_dmmod")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+texture_filter = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -208.0
+offset_top = 48.0
+offset_right = -41.0
+offset_bottom = 64.0
+grow_horizontal = 0
+max_value = 10.0
+step = 0.1
+value = 5.0
+rounded = true
+texture_under = ExtResource("2_ups70")
+texture_progress = ExtResource("2_ups70")
+tint_progress = Color(0.376471, 0.627451, 0.941176, 1)
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
