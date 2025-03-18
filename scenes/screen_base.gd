@@ -9,7 +9,7 @@ var remembered_focus: Control
 
 func _ready() -> void:
 	if focus_on_enter is FancyButton: focus_on_enter.focus_immediately = true
-	focus_on_enter.grab_focus()
+	if focus_on_enter != null: focus_on_enter.grab_focus()
 	
 	if bg != null and bg_fades & 1:
 		var bg_tween = create_tween()

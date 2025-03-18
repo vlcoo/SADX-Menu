@@ -1,0 +1,497 @@
+[gd_scene load_steps=40 format=3 uid="uid://c6cqda23rp6mp"]
+
+[ext_resource type="Script" uid="uid://cut0gm35dlsgi" path="res://scenes/screen_file.gd" id="1_hwqr8"]
+[ext_resource type="Texture2D" uid="uid://bafrbsn0lik63" path="res://sadx out/ad_back_c.webp" id="2_h4umb"]
+[ext_resource type="FontFile" uid="uid://bqfgjjocebx3" path="res://sadx out/font/Roboto-Italic-VariableFont_wdth,wght.ttf" id="3_o5vf2"]
+[ext_resource type="AudioStream" uid="uid://byx71hujo1r6d" path="res://sadx out/bgm/option.ogg" id="4_arycw"]
+[ext_resource type="AudioStream" uid="uid://pmp2owjesp7v" path="res://sadx out/VOICE_US/0001.wav" id="5_thxm8"]
+[ext_resource type="PackedScene" uid="uid://fsilog7v1q5h" path="res://components/file_button.tscn" id="6_arycw"]
+[ext_resource type="Texture2D" uid="uid://blwjr4foc0qu6" path="res://sadx out/AVA_FSCMN_E/fs_file_modoru_e.png" id="7_1rv5c"]
+[ext_resource type="FontFile" uid="uid://2ru8kn45as4h" path="res://sadx out/font/Roboto-VariableFont_wdth,wght.ttf" id="7_3bjj2"]
+[ext_resource type="Texture2D" uid="uid://dr3p5ynxrjb5s" path="res://sadx out/AVA_FILESEL_E_HD/frame.png" id="7_thxm8"]
+[ext_resource type="Texture2D" uid="uid://bah018vr1s4ig" path="res://sadx out/AVA_FILESEL_E_HD/fs_namesita.png" id="10_212g8"]
+[ext_resource type="FontFile" uid="uid://cd4o2q11bc03n" path="res://sadx out/font/BAUHAUSB.TTF" id="11_hjpyu"]
+[ext_resource type="Texture2D" uid="uid://ovklbnhxxc4r" path="res://sadx out/AVA_FILESEL_E_HD/maru_sonic.png" id="12_d02o1"]
+[ext_resource type="Texture2D" uid="uid://bo4nu0nqi4pm1" path="res://sadx out/AVA_FILESEL_E_HD/maru_tails.png" id="13_jdycb"]
+[ext_resource type="Texture2D" uid="uid://cqmlukwn6yvgn" path="res://sadx out/AVA_FILESEL_E_HD/n_maru_tails.png" id="14_mfxek"]
+[ext_resource type="Texture2D" uid="uid://cwj0d1yjnettf" path="res://sadx out/AVA_FILESEL_E_HD/maru_knuckles.png" id="15_r84nj"]
+[ext_resource type="Texture2D" uid="uid://diw7ixo1qb32e" path="res://sadx out/AVA_FILESEL_E_HD/n_maru_knuckles.png" id="16_yjrsq"]
+[ext_resource type="Texture2D" uid="uid://bafcmgrnxonep" path="res://sadx out/AVA_FILESEL_E_HD/MARU_AMY.png" id="17_bssy1"]
+[ext_resource type="Texture2D" uid="uid://doi4bwsdceewg" path="res://sadx out/AVA_FILESEL_E_HD/n_maru_amy.png" id="18_j52cx"]
+[ext_resource type="Texture2D" uid="uid://b2ldx6n3qp3ff" path="res://sadx out/AVA_FILESEL_E_HD/MARU_BIG.png" id="19_jb6co"]
+[ext_resource type="Texture2D" uid="uid://vl6rg10edfub" path="res://sadx out/AVA_FILESEL_E_HD/n_maru_big.png" id="20_gsaeh"]
+[ext_resource type="Texture2D" uid="uid://ckm7vv6lyungt" path="res://sadx out/AVA_FILESEL_E_HD/maru_e102.png" id="21_ixpkx"]
+[ext_resource type="Texture2D" uid="uid://b2yaxxrwqrk00" path="res://sadx out/AVA_FILESEL_E_HD/n_maru_e102.png" id="22_dxi4f"]
+[ext_resource type="Texture2D" uid="uid://b8fmufj7oxaxe" path="res://sadx out/AVA_FILESEL_E_HD/mini_header.png" id="23_hjpyu"]
+[ext_resource type="Texture2D" uid="uid://btd213txlu8xj" path="res://sadx out/AVA_SQUARE_HD/button_s.png" id="24_d02o1"]
+[ext_resource type="Texture2D" uid="uid://ctx2i2v6b6t4m" path="res://sadx out/AVA_FILESEL_E_HD/embrem.png" id="25_jdycb"]
+
+[sub_resource type="Gradient" id="Gradient_l1mpm"]
+offsets = PackedFloat32Array(0, 0.746094)
+colors = PackedColorArray(0, 0.529688, 0.0993163, 1, 0, 0.439216, 0.0823529, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_1rv5c"]
+gradient = SubResource("Gradient_l1mpm")
+
+[sub_resource type="FontVariation" id="FontVariation_ck2tf"]
+base_font = ExtResource("3_o5vf2")
+variation_opentype = {
+2003072104: 100,
+2003265652: 900
+}
+variation_embolden = 0.3
+variation_transform = Transform2D(1.1, 0, 0, 1, 0, 0)
+spacing_glyph = 2
+
+[sub_resource type="LabelSettings" id="LabelSettings_3bjj2"]
+font = SubResource("FontVariation_ck2tf")
+font_size = 30
+outline_size = 7
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="FontVariation" id="FontVariation_ocp2o"]
+base_font = ExtResource("7_3bjj2")
+variation_opentype = {
+2003072104: 100,
+2003265652: 600
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_mfxek"]
+font = SubResource("FontVariation_ocp2o")
+font_size = 18
+outline_size = 7
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1rv5c"]
+texture = ExtResource("7_thxm8")
+texture_margin_left = 27.0
+texture_margin_top = 27.0
+texture_margin_right = 27.0
+texture_margin_bottom = 27.0
+
+[sub_resource type="FontVariation" id="FontVariation_s2ld6"]
+base_font = ExtResource("11_hjpyu")
+variation_embolden = 0.5
+variation_transform = Transform2D(0.95, 0, 0, 1, 0, 0)
+
+[sub_resource type="LabelSettings" id="LabelSettings_menap"]
+font = SubResource("FontVariation_s2ld6")
+font_size = 34
+font_color = Color(0.0578125, 0.337524, 1, 1)
+outline_size = 11
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="FontVariation" id="FontVariation_d02o1"]
+base_font = ExtResource("7_3bjj2")
+variation_opentype = {
+2003072104: 100,
+2003265652: 600
+}
+variation_transform = Transform2D(1.15, 0, 0, 1, 0, 0)
+spacing_glyph = 1
+
+[sub_resource type="LabelSettings" id="LabelSettings_jdycb"]
+font = SubResource("FontVariation_d02o1")
+
+[sub_resource type="FontVariation" id="FontVariation_mfxek"]
+base_font = ExtResource("7_3bjj2")
+variation_opentype = {
+2003072104: 100,
+2003265652: 600
+}
+variation_transform = Transform2D(1.15, 0, 0, 1, 0, 0)
+spacing_glyph = 5
+spacing_space = 14
+
+[sub_resource type="LabelSettings" id="LabelSettings_r84nj"]
+font = SubResource("FontVariation_mfxek")
+
+[sub_resource type="LabelSettings" id="LabelSettings_yjrsq"]
+font = SubResource("FontVariation_mfxek")
+
+[node name="ScreenFile" type="Control" node_paths=PackedStringArray("focus_on_enter", "bg")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hwqr8")
+focus_on_enter = NodePath("HBoxContainer/VBoxContainer/FileButton")
+bg = NodePath("BG")
+bg_fades = 3
+
+[node name="BG" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_h4umb")
+expand_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 40.0
+offset_bottom = 88.0
+grow_horizontal = 2
+texture = SubResource("GradientTexture1D_1rv5c")
+
+[node name="Label" type="Label" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Select a file"
+label_settings = SubResource("LabelSettings_3bjj2")
+vertical_alignment = 1
+
+[node name="AudioMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_arycw")
+autoplay = true
+bus = &"Music"
+
+[node name="AudioVoice" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_thxm8")
+autoplay = true
+bus = &"Voice"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 72.0
+offset_top = 93.0
+offset_right = -72.0
+offset_bottom = -19.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = -32
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="FileButton" parent="HBoxContainer/VBoxContainer" instance=ExtResource("6_arycw")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+
+[node name="FileButton2" parent="HBoxContainer/VBoxContainer" instance=ExtResource("6_arycw")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+
+[node name="Label" parent="HBoxContainer/VBoxContainer/FileButton2/TextureBG" index="1"]
+text = "   2"
+
+[node name="FileButton3" parent="HBoxContainer/VBoxContainer" instance=ExtResource("6_arycw")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+
+[node name="Label" parent="HBoxContainer/VBoxContainer/FileButton3/TextureBG" index="1"]
+text = "   3"
+
+[node name="FileButtonCancel" parent="HBoxContainer/VBoxContainer" instance=ExtResource("6_arycw")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+confirm_type = 2
+
+[node name="Label" parent="HBoxContainer/VBoxContainer/FileButtonCancel/TextureSubBG" index="0"]
+offset_left = 11.0
+offset_right = -99.0
+text = "Cancel"
+label_settings = SubResource("LabelSettings_mfxek")
+
+[node name="Label" parent="HBoxContainer/VBoxContainer/FileButtonCancel/TextureBG" index="1"]
+visible = false
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/VBoxContainer/FileButtonCancel/TextureBG" index="2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_1rv5c")
+stretch_mode = 5
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer"]
+custom_minimum_size = Vector2(340, 261)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_1rv5c")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = 4
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(260, 34)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("10_212g8")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="HBoxContainer/PanelContainer/VBoxContainer/TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "SONIC"
+label_settings = SubResource("LabelSettings_menap")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 36)
+layout_mode = 2
+alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="HBoxContainer/PanelContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 6
+focus_mode = 0
+texture_normal = ExtResource("12_d02o1")
+texture_disabled = ExtResource("12_d02o1")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TextureButton3" type="TextureButton" parent="HBoxContainer/PanelContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 6
+focus_mode = 0
+texture_normal = ExtResource("13_jdycb")
+texture_disabled = ExtResource("14_mfxek")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TextureButton2" type="TextureButton" parent="HBoxContainer/PanelContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 6
+focus_mode = 0
+texture_normal = ExtResource("15_r84nj")
+texture_disabled = ExtResource("16_yjrsq")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TextureButton4" type="TextureButton" parent="HBoxContainer/PanelContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 6
+focus_mode = 0
+texture_normal = ExtResource("17_bssy1")
+texture_disabled = ExtResource("18_j52cx")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TextureButton5" type="TextureButton" parent="HBoxContainer/PanelContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 6
+focus_mode = 0
+texture_normal = ExtResource("19_jb6co")
+texture_disabled = ExtResource("20_gsaeh")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TextureButton6" type="TextureButton" parent="HBoxContainer/PanelContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 6
+focus_mode = 0
+texture_normal = ExtResource("21_ixpkx")
+texture_disabled = ExtResource("22_dxi4f")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TextureRect2" type="TextureRect" parent="HBoxContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("23_hjpyu")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="HBoxContainer/PanelContainer/VBoxContainer/TextureRect2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "From"
+label_settings = SubResource("LabelSettings_jdycb")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect6" type="TextureRect" parent="HBoxContainer/PanelContainer/VBoxContainer"]
+self_modulate = Color(0, 0.658824, 0.85098, 1)
+custom_minimum_size = Vector2(260, 32)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("24_d02o1")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="HBoxContainer/PanelContainer/VBoxContainer/TextureRect6"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Station Square"
+label_settings = SubResource("LabelSettings_jdycb")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect3" type="TextureRect" parent="HBoxContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("23_hjpyu")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="HBoxContainer/PanelContainer/VBoxContainer/TextureRect3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Completed"
+label_settings = SubResource("LabelSettings_jdycb")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect7" type="TextureRect" parent="HBoxContainer/PanelContainer/VBoxContainer"]
+self_modulate = Color(0, 0.658824, 0.85098, 1)
+custom_minimum_size = Vector2(260, 32)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("24_d02o1")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="HBoxContainer/PanelContainer/VBoxContainer/TextureRect7"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Hedgehog Hammer"
+label_settings = SubResource("LabelSettings_jdycb")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect4" type="TextureRect" parent="HBoxContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("23_hjpyu")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="HBoxContainer/PanelContainer/VBoxContainer/TextureRect4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Play Time"
+label_settings = SubResource("LabelSettings_jdycb")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect8" type="TextureRect" parent="HBoxContainer/PanelContainer/VBoxContainer"]
+self_modulate = Color(0, 0.658824, 0.85098, 1)
+custom_minimum_size = Vector2(260, 32)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("24_d02o1")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="HBoxContainer/PanelContainer/VBoxContainer/TextureRect8"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "12:28"
+label_settings = SubResource("LabelSettings_r84nj")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect5" type="TextureRect" parent="HBoxContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("23_hjpyu")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="HBoxContainer/PanelContainer/VBoxContainer/TextureRect5"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Emblem"
+label_settings = SubResource("LabelSettings_jdycb")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect9" type="TextureRect" parent="HBoxContainer/PanelContainer/VBoxContainer"]
+self_modulate = Color(0, 0.658824, 0.85098, 1)
+custom_minimum_size = Vector2(260, 32)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("24_d02o1")
+expand_mode = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/PanelContainer/VBoxContainer/TextureRect9"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/PanelContainer/VBoxContainer/TextureRect9/HBoxContainer"]
+custom_minimum_size = Vector2(64, 38)
+layout_mode = 2
+texture = ExtResource("25_jdycb")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="HBoxContainer/PanelContainer/VBoxContainer/TextureRect9/HBoxContainer"]
+layout_mode = 2
+text = "x 130"
+label_settings = SubResource("LabelSettings_yjrsq")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/FileButton" to="." method="_on_file_button_file_pressed" binds= [1]]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/FileButton2" to="." method="_on_file_button_file_pressed" binds= [2]]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/FileButton3" to="." method="_on_file_button_file_pressed" binds= [3]]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/FileButtonCancel" to="." method="_on_file_button_cancel_pressed"]
+
+[editable path="HBoxContainer/VBoxContainer/FileButton2"]
+[editable path="HBoxContainer/VBoxContainer/FileButton3"]
+[editable path="HBoxContainer/VBoxContainer/FileButtonCancel"]

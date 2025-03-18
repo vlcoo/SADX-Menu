@@ -13,6 +13,7 @@ func _ready() -> void:
 
 
 func appear() -> void:
+	scale = Vector2.ZERO
 	visible = true
 	if focus_on_appear is FancyButton: focus_on_appear.focus_immediately = true
 	focus_on_appear.grab_focus()

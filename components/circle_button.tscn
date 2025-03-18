@@ -45,7 +45,7 @@ _data = {
 &"focus_flash": SubResource("Animation_p0le0")
 }
 
-[sub_resource type="FontVariation" id="FontVariation_ocp2o"]
+[sub_resource type="FontVariation" id="FontVariation_4wjwm"]
 base_font = ExtResource("4_ieq88")
 variation_opentype = {
 2003072104: 100,
@@ -53,7 +53,7 @@ variation_opentype = {
 }
 
 [sub_resource type="LabelSettings" id="LabelSettings_4wjwm"]
-font = SubResource("FontVariation_ocp2o")
+font = SubResource("FontVariation_4wjwm")
 font_size = 18
 
 [node name="CircleButton" type="TextureButton"]
