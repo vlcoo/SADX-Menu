@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://c6cqda23rp6mp"]
+[gd_scene load_steps=44 format=3 uid="uid://c6cqda23rp6mp"]
 
 [ext_resource type="Script" uid="uid://cut0gm35dlsgi" path="res://scenes/screen_file.gd" id="1_hwqr8"]
 [ext_resource type="Texture2D" uid="uid://bafrbsn0lik63" path="res://sadx out/ad_back_c.webp" id="2_h4umb"]
@@ -25,6 +25,8 @@
 [ext_resource type="Texture2D" uid="uid://b8fmufj7oxaxe" path="res://sadx out/AVA_FILESEL_E_HD/mini_header.png" id="23_hjpyu"]
 [ext_resource type="Texture2D" uid="uid://btd213txlu8xj" path="res://sadx out/AVA_SQUARE_HD/button_s.png" id="24_d02o1"]
 [ext_resource type="Texture2D" uid="uid://ctx2i2v6b6t4m" path="res://sadx out/AVA_FILESEL_E_HD/embrem.png" id="25_jdycb"]
+[ext_resource type="PackedScene" uid="uid://cykomhofgiy7e" path="res://components/button_dialog.tscn" id="26_r84nj"]
+[ext_resource type="PackedScene" uid="uid://b0d4sp4tmo32o" path="res://components/circle_button.tscn" id="27_yjrsq"]
 
 [sub_resource type="Gradient" id="Gradient_l1mpm"]
 offsets = PackedFloat32Array(0, 0.746094)
@@ -109,6 +111,19 @@ font = SubResource("FontVariation_mfxek")
 [sub_resource type="LabelSettings" id="LabelSettings_yjrsq"]
 font = SubResource("FontVariation_mfxek")
 
+[sub_resource type="FontVariation" id="FontVariation_bssy1"]
+base_font = ExtResource("7_3bjj2")
+variation_opentype = {
+2003072104: 100,
+2003265652: 600
+}
+spacing_glyph = 2
+
+[sub_resource type="LabelSettings" id="LabelSettings_j52cx"]
+font = SubResource("FontVariation_bssy1")
+font_size = 22
+outline_color = Color(0, 0, 0, 1)
+
 [node name="ScreenFile" type="Control" node_paths=PackedStringArray("focus_on_enter", "bg")]
 layout_mode = 3
 anchors_preset = 15
@@ -186,11 +201,13 @@ alignment = 1
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
+confirm_type = 0
 
 [node name="FileButton2" parent="HBoxContainer/VBoxContainer" instance=ExtResource("6_arycw")]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
+confirm_type = 0
 
 [node name="Label" parent="HBoxContainer/VBoxContainer/FileButton2/TextureBG" index="1"]
 text = "   2"
@@ -199,6 +216,7 @@ text = "   2"
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
+confirm_type = 0
 
 [node name="Label" parent="HBoxContainer/VBoxContainer/FileButton3/TextureBG" index="1"]
 text = "   3"
@@ -487,11 +505,114 @@ label_settings = SubResource("LabelSettings_yjrsq")
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="DialogFile" parent="CanvasLayer" node_paths=PackedStringArray("focus_on_appear") instance=ExtResource("26_r84nj")]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -288.0
+offset_top = -147.0
+offset_right = 288.0
+offset_bottom = -51.0
+focus_on_appear = NodePath("HBoxContainer/ButtonFileOK")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/DialogFile"]
+layout_mode = 2
+theme_override_constants/separation = -110
+alignment = 1
+
+[node name="ButtonFileOK" parent="CanvasLayer/DialogFile/HBoxContainer" instance=ExtResource("27_yjrsq")]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+
+[node name="Label" parent="CanvasLayer/DialogFile/HBoxContainer/ButtonFileOK/TextureBG" index="1"]
+text = "OK"
+
+[node name="ButtonFileCancel" parent="CanvasLayer/DialogFile/HBoxContainer" instance=ExtResource("27_yjrsq")]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+confirm_type = 2
+
+[node name="Label" parent="CanvasLayer/DialogFile/HBoxContainer/ButtonFileCancel/TextureBG" index="1"]
+text = "Cancel"
+
+[node name="ButtonFileDelete" parent="CanvasLayer/DialogFile/HBoxContainer" instance=ExtResource("27_yjrsq")]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+
+[node name="Label" parent="CanvasLayer/DialogFile/HBoxContainer/ButtonFileDelete/TextureBG" index="1"]
+text = "Delete"
+
+[node name="DialogDelete" parent="CanvasLayer" node_paths=PackedStringArray("focus_on_appear") instance=ExtResource("26_r84nj")]
+visible = false
+custom_minimum_size = Vector2(336, 136)
+offset_left = 80.0
+offset_top = 96.0
+offset_right = 416.0
+offset_bottom = 232.0
+pivot_offset = Vector2(168, 68)
+focus_on_appear = NodePath("VBoxContainer/HBoxContainer/ButtonDeleteOK")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/DialogDelete"]
+layout_mode = 2
+theme_override_constants/separation = -42
+alignment = 1
+
+[node name="LabelFileQuestion" type="Label" parent="CanvasLayer/DialogDelete/VBoxContainer"]
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+size_flags_stretch_ratio = 0.65
+text = "Delete file%?"
+label_settings = SubResource("LabelSettings_j52cx")
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/DialogDelete/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="ButtonDeleteOK" parent="CanvasLayer/DialogDelete/VBoxContainer/HBoxContainer" instance=ExtResource("27_yjrsq")]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+
+[node name="Label" parent="CanvasLayer/DialogDelete/VBoxContainer/HBoxContainer/ButtonDeleteOK/TextureBG" index="1"]
+text = "OK"
+
+[node name="ButtonDeleteCancel" parent="CanvasLayer/DialogDelete/VBoxContainer/HBoxContainer" instance=ExtResource("27_yjrsq")]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+confirm_type = 2
+
+[node name="Label" parent="CanvasLayer/DialogDelete/VBoxContainer/HBoxContainer/ButtonDeleteCancel/TextureBG" index="1"]
+text = "Cancel"
+
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/FileButton" to="." method="_on_file_button_file_pressed" binds= [1]]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/FileButton2" to="." method="_on_file_button_file_pressed" binds= [2]]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/FileButton3" to="." method="_on_file_button_file_pressed" binds= [3]]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/FileButtonCancel" to="." method="_on_file_button_cancel_pressed"]
+[connection signal="pressed" from="CanvasLayer/DialogFile/HBoxContainer/ButtonFileOK" to="." method="_on_button_file_ok_pressed"]
+[connection signal="pressed" from="CanvasLayer/DialogFile/HBoxContainer/ButtonFileCancel" to="." method="_on_button_file_cancel_pressed"]
+[connection signal="pressed" from="CanvasLayer/DialogFile/HBoxContainer/ButtonFileDelete" to="." method="_on_button_file_delete_pressed"]
+[connection signal="pressed" from="CanvasLayer/DialogDelete/VBoxContainer/HBoxContainer/ButtonDeleteOK" to="." method="_on_button_delete_ok_pressed"]
+[connection signal="pressed" from="CanvasLayer/DialogDelete/VBoxContainer/HBoxContainer/ButtonDeleteCancel" to="." method="_on_button_delete_cancel_pressed"]
 
 [editable path="HBoxContainer/VBoxContainer/FileButton2"]
 [editable path="HBoxContainer/VBoxContainer/FileButton3"]
 [editable path="HBoxContainer/VBoxContainer/FileButtonCancel"]
+[editable path="CanvasLayer/DialogFile/HBoxContainer/ButtonFileOK"]
+[editable path="CanvasLayer/DialogFile/HBoxContainer/ButtonFileCancel"]
+[editable path="CanvasLayer/DialogFile/HBoxContainer/ButtonFileDelete"]
+[editable path="CanvasLayer/DialogDelete/VBoxContainer/HBoxContainer/ButtonDeleteOK"]
+[editable path="CanvasLayer/DialogDelete/VBoxContainer/HBoxContainer/ButtonDeleteCancel"]

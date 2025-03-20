@@ -6,7 +6,10 @@ extends ScreenBase
 
 @onready var dialog_voice: ButtonDialog = $CanvasLayer/DialogVoice
 @onready var dialog_text: ButtonDialog = $CanvasLayer/DialogText
+@onready var dialog_generic_two: ButtonDialog = $CanvasLayer/DialogGenericTwo
 @onready var label_sonic: Label = $PanelContainer/VBoxContainer/GridContainer/TextureRect/Label
+@onready var button_generic_l: FancyButton = $CanvasLayer/DialogGenericTwo/HBoxContainer/ButtonGenericL
+@onready var button_generic_r: FancyButton = $CanvasLayer/DialogGenericTwo/HBoxContainer/ButtonGenericR
 
 
 func _ready() -> void:
@@ -19,7 +22,10 @@ func _on_button_sound_test_pressed() -> void:
 
 
 func _on_button_msg_settings_pressed() -> void:
-	pass # Replace with function body.
+	button_generic_l.find_and_set_label_text("Voice & Text")
+	button_generic_r.find_and_set_label_text("Voice Only")
+	store_remembered_focus()
+	dialog_generic_two.appear()
 
 
 func _on_button_language_pressed() -> void:
@@ -28,7 +34,10 @@ func _on_button_language_pressed() -> void:
 
 
 func _on_button_sound_pressed() -> void:
-	pass # Replace with function body.
+	button_generic_l.find_and_set_label_text("Stereo")
+	button_generic_r.find_and_set_label_text("Mono")
+	store_remembered_focus()
+	dialog_generic_two.appear()
 
 
 func _on_button_file_pressed() -> void:
@@ -60,3 +69,17 @@ func _on_button_exit_pressed() -> void:
 	audio_voice.stop()
 	await get_tree().create_timer(0.45).timeout
 	get_tree().quit()
+
+
+func _on_button_rumble_pressed() -> void:
+	button_generic_l.find_and_set_label_text("On")
+	button_generic_r.find_and_set_label_text("Off")
+	store_remembered_focus()
+	dialog_generic_two.appear()
+
+
+func _on_button_generic_pressed() -> void:
+	dialog_generic_two.disappear()
+	restore_remembered_focus()
+	await dialog_generic_two.finished_disappearing
+	NowSaving.appear()

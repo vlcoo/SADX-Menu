@@ -15,11 +15,22 @@ const NEGATIVE = preload("res://sadx out/COMMON_BANK00/B00_00_03.wav")
 @export var confirm_type := ConfirmType.POSITIVE
 @export var grow_when_focused := false
 @export var flash_when_focused := true
+@export var label: Label
 var focus_immediately := false
 
 
 func _ready() -> void:
 	pivot_offset = size / 2
+
+
+func find_and_set_label_text(text: String) -> void:
+	if label == null:
+		for child in get_children():
+			if child is Label: label = child
+		for child in texture_bg.get_children():
+			if child is Label: label = child
+	
+	if label != null: label.text = text
 
 
 func _on_pressed() -> void:

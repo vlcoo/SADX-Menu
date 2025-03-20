@@ -3,6 +3,8 @@ extends CanvasLayer
 @onready var bar: TextureProgressBar = $TextureProgressBar
 @onready var timer: Timer = $Timer
 
+var current_file_id := 0
+
 signal finished_saving
 
 

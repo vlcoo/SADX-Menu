@@ -118,6 +118,7 @@ text = "English"
 label_settings = SubResource("LabelSettings_4wjwm")
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 3
 
 [connection signal="focus_entered" from="." to="." method="_on_focus_entered"]
 [connection signal="focus_exited" from="." to="." method="_on_focus_exited"]

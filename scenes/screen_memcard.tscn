@@ -176,6 +176,7 @@ layout_mode = 2
 
 [node name="VmuButton2" parent="HBoxContainer/TextureRect2/TextureRect3/TextureRect2/VBoxContainer" instance=ExtResource("8_1lebp")]
 layout_mode = 2
+confirm_type = 0
 
 [node name="Label" parent="HBoxContainer/TextureRect2/TextureRect3/TextureRect2/VBoxContainer/VmuButton2" index="2"]
 text = "2"

@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://c04uns7pw8k5g"]
+[gd_scene load_steps=53 format=3 uid="uid://c04uns7pw8k5g"]
 
 [ext_resource type="Script" uid="uid://cfxps151rtgo6" path="res://scenes/screen_options.gd" id="1_hnq7k"]
 [ext_resource type="Texture2D" uid="uid://bafrbsn0lik63" path="res://sadx out/ad_back_c.webp" id="1_rwryf"]
@@ -22,8 +22,11 @@
 [ext_resource type="Texture2D" uid="uid://bsvsab71gldvl" path="res://sadx out/AVA_OPTION_E_HD/op_tv_sitaji1.png" id="17_ckk36"]
 [ext_resource type="Texture2D" uid="uid://didit8b14v5vq" path="res://sadx out/AVA_OPTION_E_HD/op_tv_sitaji2.png" id="18_11pgn"]
 [ext_resource type="AudioStream" uid="uid://byx71hujo1r6d" path="res://sadx out/bgm/option.ogg" id="21_11pgn"]
+[ext_resource type="Texture2D" uid="uid://cvp0gg5qi3fx2" path="res://sadx out/AVA_OPTION_E_HD/op_vib_buru1.png" id="22_5nyu8"]
+[ext_resource type="Texture2D" uid="uid://dsx48mtbin8jf" path="res://sadx out/AVA_OPTION_E_HD/op_vib_buru.png" id="23_b38ux"]
 [ext_resource type="AudioStream" uid="uid://doqah68eermit" path="res://sadx out/VOICE_US/0014.wav" id="23_qhqr2"]
 [ext_resource type="PackedScene" uid="uid://cykomhofgiy7e" path="res://components/button_dialog.tscn" id="24_5r6a4"]
+[ext_resource type="Texture2D" uid="uid://dvtnyeam5fooc" path="res://sadx out/AVA_OPTION_E_HD/op_vib_buru2.png" id="24_gnnqq"]
 [ext_resource type="PackedScene" uid="uid://b0d4sp4tmo32o" path="res://components/circle_button.tscn" id="25_8bxch"]
 
 [sub_resource type="Gradient" id="Gradient_l1mpm"]
@@ -245,6 +248,20 @@ frame_2/duration = 0.15
 frame_3/texture = ExtResource("17_ckk36")
 frame_3/duration = 0.15
 
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_6mwdd"]
+frames = 4
+frame_0/texture = ExtResource("22_5nyu8")
+frame_0/duration = 0.6
+frame_1/texture = ExtResource("23_b38ux")
+frame_1/duration = 0.1
+frame_2/texture = ExtResource("22_5nyu8")
+frame_2/duration = 0.1
+frame_3/texture = ExtResource("24_gnnqq")
+frame_3/duration = 0.1
+
+[sub_resource type="LabelSettings" id="LabelSettings_5w2r8"]
+font = SubResource("FontVariation_vvtcd")
+
 [sub_resource type="FontVariation" id="FontVariation_8bxch"]
 base_font = ExtResource("4_a2b45")
 variation_opentype = {
@@ -422,6 +439,7 @@ expand_mode = 1
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
+confirm_type = 0
 
 [node name="Label2" type="Label" parent="PanelContainer/VBoxContainer/GridContainer/ButtonSoundTest"]
 layout_mode = 1
@@ -439,6 +457,7 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
+confirm_type = 0
 
 [node name="Label2" type="Label" parent="PanelContainer/VBoxContainer/GridContainer/ButtonMsgSettings"]
 layout_mode = 1
@@ -549,6 +568,7 @@ texture = ExtResource("17_11pgn")
 expand_mode = 1
 
 [node name="TextureRect3" type="TextureRect" parent="PanelContainer/VBoxContainer/GridContainer2"]
+visible = false
 custom_minimum_size = Vector2(104, 104)
 layout_mode = 2
 size_flags_horizontal = 6
@@ -556,10 +576,19 @@ size_flags_vertical = 6
 texture = SubResource("AnimatedTexture_hnq7k")
 expand_mode = 1
 
+[node name="TextureRect6" type="TextureRect" parent="PanelContainer/VBoxContainer/GridContainer2"]
+custom_minimum_size = Vector2(104, 104)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture = SubResource("AnimatedTexture_6mwdd")
+expand_mode = 1
+
 [node name="ButtonSound" parent="PanelContainer/VBoxContainer/GridContainer2" instance=ExtResource("3_l1mpm")]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
+confirm_type = 0
 
 [node name="Label2" type="Label" parent="PanelContainer/VBoxContainer/GridContainer2/ButtonSound"]
 layout_mode = 1
@@ -591,6 +620,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="ButtonTV" parent="PanelContainer/VBoxContainer/GridContainer2" instance=ExtResource("3_l1mpm")]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
@@ -604,6 +634,24 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "TV Setting"
 label_settings = SubResource("LabelSettings_ck2tf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ButtonRumble" parent="PanelContainer/VBoxContainer/GridContainer2" instance=ExtResource("3_l1mpm")]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+confirm_type = 0
+
+[node name="Label2" type="Label" parent="PanelContainer/VBoxContainer/GridContainer2/ButtonRumble"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Controller Rumble"
+label_settings = SubResource("LabelSettings_5w2r8")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -767,12 +815,42 @@ focus_neighbor_top = NodePath("../../HBoxContainer/ButtonJapanese")
 [node name="Label" parent="CanvasLayer/DialogText/VBoxContainer/HBoxContainer2/ButtonSpanish/TextureBG" index="1"]
 text = "Español"
 
+[node name="DialogGenericTwo" parent="CanvasLayer" node_paths=PackedStringArray("focus_on_appear") instance=ExtResource("24_5r6a4")]
+visible = false
+offset_left = 32.0
+offset_top = 333.0
+offset_right = 608.0
+offset_bottom = 429.0
+focus_on_appear = NodePath("HBoxContainer/ButtonGenericL")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/DialogGenericTwo"]
+layout_mode = 2
+theme_override_constants/separation = -100
+alignment = 1
+
+[node name="ButtonGenericL" parent="CanvasLayer/DialogGenericTwo/HBoxContainer" instance=ExtResource("25_8bxch")]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+
+[node name="Label" parent="CanvasLayer/DialogGenericTwo/HBoxContainer/ButtonGenericL/TextureBG" index="1"]
+text = "On"
+
+[node name="ButtonGenericR" parent="CanvasLayer/DialogGenericTwo/HBoxContainer" instance=ExtResource("25_8bxch")]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+
+[node name="Label" parent="CanvasLayer/DialogGenericTwo/HBoxContainer/ButtonGenericR/TextureBG" index="1"]
+text = "Off"
+
 [connection signal="pressed" from="PanelContainer/VBoxContainer/GridContainer/ButtonSoundTest" to="." method="_on_button_sound_test_pressed"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/GridContainer/ButtonMsgSettings" to="." method="_on_button_msg_settings_pressed"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/GridContainer/ButtonLanguage" to="." method="_on_button_language_pressed"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/GridContainer2/ButtonSound" to="." method="_on_button_sound_pressed"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/GridContainer2/ButtonFile" to="." method="_on_button_file_pressed"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/GridContainer2/ButtonTV" to="." method="_on_button_tv_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/GridContainer2/ButtonRumble" to="." method="_on_button_rumble_pressed"]
 [connection signal="pressed" from="ButtonExit" to="." method="_on_button_exit_pressed"]
 [connection signal="pressed" from="CanvasLayer/DialogVoice/VBoxContainer/HBoxContainer/ButtonVoiceEnglish" to="." method="_on_button_voice_pressed" binds= ["english"]]
 [connection signal="pressed" from="CanvasLayer/DialogVoice/VBoxContainer/HBoxContainer/ButtonVoiceJapanese" to="." method="_on_button_voice_pressed" binds= ["japanese"]]
@@ -781,9 +859,13 @@ text = "Español"
 [connection signal="pressed" from="CanvasLayer/DialogText/VBoxContainer/HBoxContainer/ButtonGerman" to="." method="_on_button_text_pressed" binds= ["german"]]
 [connection signal="pressed" from="CanvasLayer/DialogText/VBoxContainer/HBoxContainer2/ButtonFrench" to="." method="_on_button_text_pressed" binds= ["french"]]
 [connection signal="pressed" from="CanvasLayer/DialogText/VBoxContainer/HBoxContainer2/ButtonSpanish" to="." method="_on_button_text_pressed" binds= ["spanish"]]
+[connection signal="pressed" from="CanvasLayer/DialogGenericTwo/HBoxContainer/ButtonGenericL" to="." method="_on_button_generic_pressed"]
+[connection signal="pressed" from="CanvasLayer/DialogGenericTwo/HBoxContainer/ButtonGenericR" to="." method="_on_button_generic_pressed"]
 
 [editable path="CanvasLayer/DialogVoice/VBoxContainer/HBoxContainer/ButtonVoiceJapanese"]
 [editable path="CanvasLayer/DialogText/VBoxContainer/HBoxContainer/ButtonJapanese"]
 [editable path="CanvasLayer/DialogText/VBoxContainer/HBoxContainer/ButtonGerman"]
 [editable path="CanvasLayer/DialogText/VBoxContainer/HBoxContainer2/ButtonFrench"]
 [editable path="CanvasLayer/DialogText/VBoxContainer/HBoxContainer2/ButtonSpanish"]
+[editable path="CanvasLayer/DialogGenericTwo/HBoxContainer/ButtonGenericL"]
+[editable path="CanvasLayer/DialogGenericTwo/HBoxContainer/ButtonGenericR"]
