@@ -1,0 +1,16 @@
+1000,mtx_kuchinaka0.png,8x8
+1001,mtx_kuchinaka1.png,8x8
+1002,s_anakage1.png,32x32
+1003,s_hando2.png,32x32
+1004,s_hando3.png,32x32
+1005,s_testhand.png,64x64
+1006,stx_btest1.png,64x64
+1007,stx_eye2.png,16x16
+1008,stx_ha.png,8x8
+1009,stx_hara.png,64x64
+1010,stx_hoho.png,64x64
+1011,stx_itemring.png,16x16
+1012,stx_itemshoos0.png,128x128
+1013,stx_kanagu.png,32x32
+1014,stx_newspin.png,64x64
+1015,ym_sjppse.png,128x128

@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="SADX Menu"
-run/main_scene="uid://borr8lx2gieqc"
+run/main_scene="uid://cn4t2munve7f6"
 config/features=PackedStringArray("4.4")
 boot_splash/bg_color=Color(0, 0, 0, 1)
 boot_splash/show_image=false
