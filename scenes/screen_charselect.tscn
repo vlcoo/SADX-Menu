@@ -473,7 +473,7 @@ texture = ExtResource("15_h386h")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Label" type="Label" parent="Control/TextureRect5"]
+[node name="LabelFileId" type="Label" parent="Control/TextureRect5"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -531,6 +531,7 @@ vertical_alignment = 1
 
 [node name="CharacterViz" parent="." instance=ExtResource("18_ixx56")]
 layout_mode = 1
+metadata/_edit_lock_ = true
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0

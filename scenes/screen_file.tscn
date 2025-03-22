@@ -76,10 +76,9 @@ base_font = ExtResource("11_hjpyu")
 variation_embolden = 0.5
 variation_transform = Transform2D(0.95, 0, 0, 1, 0, 0)
 
-[sub_resource type="LabelSettings" id="LabelSettings_menap"]
+[sub_resource type="LabelSettings" id="LabelSettings_bssy1"]
 font = SubResource("FontVariation_s2ld6")
 font_size = 34
-font_color = Color(0.0578125, 0.337524, 1, 1)
 outline_size = 11
 outline_color = Color(0, 0, 0, 1)
 
@@ -132,7 +131,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_hwqr8")
-focus_on_enter = NodePath("HBoxContainer/VBoxContainer/FileButton")
+focus_on_enter = NodePath("HBoxContainer/ContainerFileButtons/FileButton")
 bg = NodePath("BG")
 bg_fades = 3
 
@@ -192,51 +191,51 @@ grow_vertical = 2
 theme_override_constants/separation = -32
 alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+[node name="ContainerFileButtons" type="VBoxContainer" parent="HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 alignment = 1
 
-[node name="FileButton" parent="HBoxContainer/VBoxContainer" instance=ExtResource("6_arycw")]
+[node name="FileButton" parent="HBoxContainer/ContainerFileButtons" instance=ExtResource("6_arycw")]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
 confirm_type = 0
 
-[node name="FileButton2" parent="HBoxContainer/VBoxContainer" instance=ExtResource("6_arycw")]
+[node name="FileButton2" parent="HBoxContainer/ContainerFileButtons" instance=ExtResource("6_arycw")]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
 confirm_type = 0
 
-[node name="Label" parent="HBoxContainer/VBoxContainer/FileButton2/TextureBG" index="1"]
+[node name="Label" parent="HBoxContainer/ContainerFileButtons/FileButton2/TextureBG" index="1"]
 text = "   2"
 
-[node name="FileButton3" parent="HBoxContainer/VBoxContainer" instance=ExtResource("6_arycw")]
+[node name="FileButton3" parent="HBoxContainer/ContainerFileButtons" instance=ExtResource("6_arycw")]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
 confirm_type = 0
 
-[node name="Label" parent="HBoxContainer/VBoxContainer/FileButton3/TextureBG" index="1"]
+[node name="Label" parent="HBoxContainer/ContainerFileButtons/FileButton3/TextureBG" index="1"]
 text = "   3"
 
-[node name="FileButtonCancel" parent="HBoxContainer/VBoxContainer" instance=ExtResource("6_arycw")]
+[node name="FileButtonCancel" parent="HBoxContainer/ContainerFileButtons" instance=ExtResource("6_arycw")]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
 confirm_type = 2
 
-[node name="Label" parent="HBoxContainer/VBoxContainer/FileButtonCancel/TextureSubBG" index="0"]
+[node name="Label" parent="HBoxContainer/ContainerFileButtons/FileButtonCancel/TextureSubBG" index="0"]
 offset_left = 11.0
 offset_right = -99.0
 text = "Cancel"
 label_settings = SubResource("LabelSettings_mfxek")
 
-[node name="Label" parent="HBoxContainer/VBoxContainer/FileButtonCancel/TextureBG" index="1"]
+[node name="Label" parent="HBoxContainer/ContainerFileButtons/FileButtonCancel/TextureBG" index="1"]
 visible = false
 
-[node name="TextureRect" type="TextureRect" parent="HBoxContainer/VBoxContainer/FileButtonCancel/TextureBG" index="2"]
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/ContainerFileButtons/FileButtonCancel/TextureBG" index="2"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -269,7 +268,7 @@ size_flags_horizontal = 4
 texture = ExtResource("10_212g8")
 expand_mode = 1
 
-[node name="Label" type="Label" parent="HBoxContainer/PanelContainer/VBoxContainer/TextureRect"]
+[node name="LabelCharacterName" type="Label" parent="HBoxContainer/PanelContainer/VBoxContainer/TextureRect"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -277,16 +276,16 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "SONIC"
-label_settings = SubResource("LabelSettings_menap")
+label_settings = SubResource("LabelSettings_bssy1")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/PanelContainer/VBoxContainer"]
+[node name="ContainerCharacterButtons" type="HBoxContainer" parent="HBoxContainer/PanelContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 36)
 layout_mode = 2
 alignment = 1
 
-[node name="TextureButton" type="TextureButton" parent="HBoxContainer/PanelContainer/VBoxContainer/HBoxContainer"]
+[node name="TextureButton" type="TextureButton" parent="HBoxContainer/PanelContainer/VBoxContainer/ContainerCharacterButtons"]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 size_flags_horizontal = 6
@@ -296,7 +295,7 @@ texture_disabled = ExtResource("12_d02o1")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="TextureButton3" type="TextureButton" parent="HBoxContainer/PanelContainer/VBoxContainer/HBoxContainer"]
+[node name="TextureButton3" type="TextureButton" parent="HBoxContainer/PanelContainer/VBoxContainer/ContainerCharacterButtons"]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 size_flags_horizontal = 6
@@ -306,7 +305,7 @@ texture_disabled = ExtResource("14_mfxek")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="TextureButton2" type="TextureButton" parent="HBoxContainer/PanelContainer/VBoxContainer/HBoxContainer"]
+[node name="TextureButton2" type="TextureButton" parent="HBoxContainer/PanelContainer/VBoxContainer/ContainerCharacterButtons"]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 size_flags_horizontal = 6
@@ -316,7 +315,7 @@ texture_disabled = ExtResource("16_yjrsq")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="TextureButton4" type="TextureButton" parent="HBoxContainer/PanelContainer/VBoxContainer/HBoxContainer"]
+[node name="TextureButton4" type="TextureButton" parent="HBoxContainer/PanelContainer/VBoxContainer/ContainerCharacterButtons"]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 size_flags_horizontal = 6
@@ -326,7 +325,7 @@ texture_disabled = ExtResource("18_j52cx")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="TextureButton5" type="TextureButton" parent="HBoxContainer/PanelContainer/VBoxContainer/HBoxContainer"]
+[node name="TextureButton5" type="TextureButton" parent="HBoxContainer/PanelContainer/VBoxContainer/ContainerCharacterButtons"]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 size_flags_horizontal = 6
@@ -336,7 +335,7 @@ texture_disabled = ExtResource("20_gsaeh")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="TextureButton6" type="TextureButton" parent="HBoxContainer/PanelContainer/VBoxContainer/HBoxContainer"]
+[node name="TextureButton6" type="TextureButton" parent="HBoxContainer/PanelContainer/VBoxContainer/ContainerCharacterButtons"]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 size_flags_horizontal = 6
@@ -371,7 +370,7 @@ size_flags_horizontal = 4
 texture = ExtResource("24_d02o1")
 expand_mode = 1
 
-[node name="Label" type="Label" parent="HBoxContainer/PanelContainer/VBoxContainer/TextureRect6"]
+[node name="LabelLocationFrom" type="Label" parent="HBoxContainer/PanelContainer/VBoxContainer/TextureRect6"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -408,7 +407,7 @@ size_flags_horizontal = 4
 texture = ExtResource("24_d02o1")
 expand_mode = 1
 
-[node name="Label" type="Label" parent="HBoxContainer/PanelContainer/VBoxContainer/TextureRect7"]
+[node name="LabelLocationCompleted" type="Label" parent="HBoxContainer/PanelContainer/VBoxContainer/TextureRect7"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -445,7 +444,7 @@ size_flags_horizontal = 4
 texture = ExtResource("24_d02o1")
 expand_mode = 1
 
-[node name="Label" type="Label" parent="HBoxContainer/PanelContainer/VBoxContainer/TextureRect8"]
+[node name="LabelPlayTime" type="Label" parent="HBoxContainer/PanelContainer/VBoxContainer/TextureRect8"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -489,20 +488,24 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = -90
 alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer/PanelContainer/VBoxContainer/TextureRect9/HBoxContainer"]
 custom_minimum_size = Vector2(64, 38)
 layout_mode = 2
+size_flags_horizontal = 6
+size_flags_stretch_ratio = 1.35
 texture = ExtResource("25_jdycb")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Label" type="Label" parent="HBoxContainer/PanelContainer/VBoxContainer/TextureRect9/HBoxContainer"]
+[node name="LabelEmblemCount" type="Label" parent="HBoxContainer/PanelContainer/VBoxContainer/TextureRect9/HBoxContainer"]
+custom_minimum_size = Vector2(78, 0)
 layout_mode = 2
+size_flags_horizontal = 6
 text = "x 130"
 label_settings = SubResource("LabelSettings_yjrsq")
-horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -598,19 +601,22 @@ confirm_type = 2
 [node name="Label" parent="CanvasLayer/DialogDelete/VBoxContainer/HBoxContainer/ButtonDeleteCancel/TextureBG" index="1"]
 text = "Cancel"
 
-[connection signal="pressed" from="HBoxContainer/VBoxContainer/FileButton" to="." method="_on_file_button_file_pressed" binds= [1]]
-[connection signal="pressed" from="HBoxContainer/VBoxContainer/FileButton2" to="." method="_on_file_button_file_pressed" binds= [2]]
-[connection signal="pressed" from="HBoxContainer/VBoxContainer/FileButton3" to="." method="_on_file_button_file_pressed" binds= [3]]
-[connection signal="pressed" from="HBoxContainer/VBoxContainer/FileButtonCancel" to="." method="_on_file_button_cancel_pressed"]
+[connection signal="focus_entered" from="HBoxContainer/ContainerFileButtons/FileButton" to="." method="_on_file_button_focus_entered" binds= [1]]
+[connection signal="pressed" from="HBoxContainer/ContainerFileButtons/FileButton" to="." method="_on_file_button_file_pressed" binds= [1]]
+[connection signal="focus_entered" from="HBoxContainer/ContainerFileButtons/FileButton2" to="." method="_on_file_button_focus_entered" binds= [2]]
+[connection signal="pressed" from="HBoxContainer/ContainerFileButtons/FileButton2" to="." method="_on_file_button_file_pressed" binds= [2]]
+[connection signal="focus_entered" from="HBoxContainer/ContainerFileButtons/FileButton3" to="." method="_on_file_button_focus_entered" binds= [3]]
+[connection signal="pressed" from="HBoxContainer/ContainerFileButtons/FileButton3" to="." method="_on_file_button_file_pressed" binds= [3]]
+[connection signal="pressed" from="HBoxContainer/ContainerFileButtons/FileButtonCancel" to="." method="_on_file_button_cancel_pressed"]
 [connection signal="pressed" from="CanvasLayer/DialogFile/HBoxContainer/ButtonFileOK" to="." method="_on_button_file_ok_pressed"]
 [connection signal="pressed" from="CanvasLayer/DialogFile/HBoxContainer/ButtonFileCancel" to="." method="_on_button_file_cancel_pressed"]
 [connection signal="pressed" from="CanvasLayer/DialogFile/HBoxContainer/ButtonFileDelete" to="." method="_on_button_file_delete_pressed"]
 [connection signal="pressed" from="CanvasLayer/DialogDelete/VBoxContainer/HBoxContainer/ButtonDeleteOK" to="." method="_on_button_delete_ok_pressed"]
 [connection signal="pressed" from="CanvasLayer/DialogDelete/VBoxContainer/HBoxContainer/ButtonDeleteCancel" to="." method="_on_button_delete_cancel_pressed"]
 
-[editable path="HBoxContainer/VBoxContainer/FileButton2"]
-[editable path="HBoxContainer/VBoxContainer/FileButton3"]
-[editable path="HBoxContainer/VBoxContainer/FileButtonCancel"]
+[editable path="HBoxContainer/ContainerFileButtons/FileButton2"]
+[editable path="HBoxContainer/ContainerFileButtons/FileButton3"]
+[editable path="HBoxContainer/ContainerFileButtons/FileButtonCancel"]
 [editable path="CanvasLayer/DialogFile/HBoxContainer/ButtonFileOK"]
 [editable path="CanvasLayer/DialogFile/HBoxContainer/ButtonFileCancel"]
 [editable path="CanvasLayer/DialogFile/HBoxContainer/ButtonFileDelete"]

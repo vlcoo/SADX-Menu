@@ -5,12 +5,14 @@ extends CanvasLayer
 @onready var sfx: AudioStreamPlayer = $AudioStreamPlayer
 
 var current_file_id := 0
+var current_save_file: FakeSaveFile
 var already_in_game := false
 
 signal finished_saving
 
 
 func _ready() -> void:
+	current_save_file = FakeSaveFile.new(true)
 	visible = false
 
 

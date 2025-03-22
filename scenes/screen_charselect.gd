@@ -1,6 +1,12 @@
 extends ScreenBase
 
 @onready var character_viz: CharacterViz = $CharacterViz
+@onready var label_file_id: Label = $Control/TextureRect5/LabelFileId
+
+
+func _ready() -> void:
+	super()
+	label_file_id.text = str(NowSaving.current_file_id)
 
 
 func _on_circle_button_pressed() -> void:
