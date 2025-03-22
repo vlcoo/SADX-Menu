@@ -1,0 +1,209 @@
+[gd_scene load_steps=15 format=3 uid="uid://cc2agmm1x60l7"]
+
+[ext_resource type="Script" uid="uid://hyrqt165sq3d" path="res://scenes/screen_main.gd" id="1_bhk8f"]
+[ext_resource type="Texture2D" uid="uid://doyh05rey322q" path="res://sadx out/title/bg_faded.png" id="2_sgss6"]
+[ext_resource type="FontFile" uid="uid://bqfgjjocebx3" path="res://sadx out/font/Roboto-Italic-VariableFont_wdth,wght.ttf" id="3_hlyr7"]
+[ext_resource type="AudioStream" uid="uid://bv1c048apind0" path="res://sadx out/bgm/title.ogg" id="6_2ufqr"]
+[ext_resource type="FontFile" uid="uid://2ru8kn45as4h" path="res://sadx out/font/Roboto-VariableFont_wdth,wght.ttf" id="11_8grpg"]
+[ext_resource type="PackedScene" uid="uid://c2ap26y0tg5af" path="res://components/rectangle_button.tscn" id="15_o1cw4"]
+[ext_resource type="PackedScene" uid="uid://cykomhofgiy7e" path="res://components/button_dialog.tscn" id="27_2t0ow"]
+
+[sub_resource type="Gradient" id="Gradient_l1mpm"]
+offsets = PackedFloat32Array(0, 0.746094)
+colors = PackedColorArray(0, 0.529688, 0.0993163, 1, 0, 0.439216, 0.0823529, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_a2b45"]
+gradient = SubResource("Gradient_l1mpm")
+
+[sub_resource type="FontVariation" id="FontVariation_ck2tf"]
+base_font = ExtResource("3_hlyr7")
+variation_opentype = {
+2003072104: 100,
+2003265652: 900
+}
+variation_embolden = 0.3
+variation_transform = Transform2D(1.1, 0, 0, 1, 0, 0)
+spacing_glyph = 2
+
+[sub_resource type="LabelSettings" id="LabelSettings_87p4l"]
+font = SubResource("FontVariation_ck2tf")
+font_size = 30
+outline_size = 7
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t2kk1"]
+bg_color = Color(0.0745098, 0.544693, 0.815686, 0.411765)
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_right = 18
+corner_radius_bottom_left = 18
+shadow_color = Color(0, 0, 0, 0.67451)
+shadow_size = 6
+shadow_offset = Vector2(8, 8)
+
+[sub_resource type="FontVariation" id="FontVariation_vvtcd"]
+base_font = ExtResource("11_8grpg")
+variation_opentype = {
+2003072104: 100,
+2003265652: 600
+}
+spacing_top = 1
+
+[sub_resource type="LabelSettings" id="LabelSettings_ck2tf"]
+font = SubResource("FontVariation_vvtcd")
+font_size = 18
+
+[node name="ScreenMain" type="Control" node_paths=PackedStringArray("focus_on_enter", "bg")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_bhk8f")
+focus_on_enter = NodePath("ButtonDialog/VBoxContainer/ButtonAdventure")
+bg = NodePath("BG")
+bg_fades = 3
+metadata/_edit_lock_ = true
+
+[node name="BG" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_sgss6")
+expand_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="Header" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 40.0
+offset_bottom = 88.0
+grow_horizontal = 2
+texture = SubResource("GradientTexture1D_a2b45")
+
+[node name="Label" type="Label" parent="Header"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Options"
+label_settings = SubResource("LabelSettings_87p4l")
+vertical_alignment = 1
+
+[node name="ButtonDialog" parent="." instance=ExtResource("27_2t0ow")]
+custom_minimum_size = Vector2(230, 200)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -115.0
+offset_top = -100.0
+offset_right = 115.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(115, 99)
+theme_override_styles/panel = SubResource("StyleBoxFlat_t2kk1")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ButtonDialog"]
+layout_mode = 2
+theme_override_constants/separation = -32
+
+[node name="ButtonAdventure" parent="ButtonDialog/VBoxContainer" instance=ExtResource("15_o1cw4")]
+custom_minimum_size = Vector2(184, 32)
+layout_mode = 2
+size_flags_vertical = 6
+grow_when_focused = true
+
+[node name="Label" type="Label" parent="ButtonDialog/VBoxContainer/ButtonAdventure"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Adventure"
+label_settings = SubResource("LabelSettings_ck2tf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ButtonTrial" parent="ButtonDialog/VBoxContainer" instance=ExtResource("15_o1cw4")]
+custom_minimum_size = Vector2(184, 32)
+layout_mode = 2
+size_flags_vertical = 6
+confirm_type = 0
+grow_when_focused = true
+
+[node name="Label" type="Label" parent="ButtonDialog/VBoxContainer/ButtonTrial"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Trial"
+label_settings = SubResource("LabelSettings_ck2tf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ButtonOptions" parent="ButtonDialog/VBoxContainer" instance=ExtResource("15_o1cw4")]
+custom_minimum_size = Vector2(184, 32)
+layout_mode = 2
+size_flags_vertical = 6
+grow_when_focused = true
+
+[node name="Label" type="Label" parent="ButtonDialog/VBoxContainer/ButtonOptions"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Options"
+label_settings = SubResource("LabelSettings_ck2tf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ButtonInternet" parent="ButtonDialog/VBoxContainer" instance=ExtResource("15_o1cw4")]
+custom_minimum_size = Vector2(184, 32)
+layout_mode = 2
+size_flags_vertical = 6
+confirm_type = 0
+grow_when_focused = true
+
+[node name="Label" type="Label" parent="ButtonDialog/VBoxContainer/ButtonInternet"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Internet"
+label_settings = SubResource("LabelSettings_ck2tf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_2ufqr")
+autoplay = true
+bus = &"Music"
+
+[node name="AudioVoice" type="AudioStreamPlayer" parent="."]
+bus = &"Voice"
+
+[connection signal="pressed" from="ButtonDialog/VBoxContainer/ButtonAdventure" to="." method="_on_button_adventure_pressed"]
+[connection signal="pressed" from="ButtonDialog/VBoxContainer/ButtonTrial" to="." method="_on_button_trial_pressed"]
+[connection signal="pressed" from="ButtonDialog/VBoxContainer/ButtonOptions" to="." method="_on_button_options_pressed"]
+[connection signal="pressed" from="ButtonDialog/VBoxContainer/ButtonInternet" to="." method="_on_button_internet_pressed"]

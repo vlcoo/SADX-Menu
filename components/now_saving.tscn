@@ -27,3 +27,6 @@ tint_progress = Color(0.376471, 0.627451, 0.941176, 1)
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+bus = &"SFX"

@@ -1,0 +1,49 @@
+[gd_scene load_steps=7 format=3 uid="uid://bgkbq2k1dj2vp"]
+
+[ext_resource type="Texture2D" uid="uid://cxt8122bpwys2" path="res://sadx out/AVA_CSR_HD/sphe_7.png" id="1_3cat2"]
+[ext_resource type="Script" uid="uid://ding781c8h6fg" path="res://components/char_title.gd" id="2_n8032"]
+[ext_resource type="Texture2D" uid="uid://b8hoafdgxs0x" path="res://sadx out/AVA_CSR_HD/sphe_6.png" id="3_prrhh"]
+[ext_resource type="FontFile" uid="uid://cd4o2q11bc03n" path="res://sadx out/font/BAUHAUSB.TTF" id="4_4m5r2"]
+
+[sub_resource type="FontVariation" id="FontVariation_s2ld6"]
+base_font = ExtResource("4_4m5r2")
+variation_embolden = 0.5
+variation_transform = Transform2D(0.95, 0, 0, 1, 0, 0)
+
+[sub_resource type="LabelSettings" id="LabelSettings_6c67r"]
+font = SubResource("FontVariation_s2ld6")
+font_size = 34
+outline_size = 11
+outline_color = Color(0, 0, 0, 1)
+
+[node name="CharTitle" type="TextureRect"]
+self_modulate = Color(0, 0, 1, 1)
+offset_right = 40.0
+offset_bottom = 40.0
+pivot_offset = Vector2(20, 20)
+texture = ExtResource("1_3cat2")
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("2_n8032")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+pivot_offset = Vector2(20, 20)
+texture = ExtResource("3_prrhh")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -66.0
+offset_top = -27.0
+offset_right = 66.0
+offset_bottom = 15.0
+grow_horizontal = 2
+text = "CHARNAME"
+label_settings = SubResource("LabelSettings_6c67r")
+horizontal_alignment = 1

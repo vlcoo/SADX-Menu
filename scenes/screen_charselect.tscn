@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://dadqd1ulmdj42"]
+[gd_scene load_steps=41 format=3 uid="uid://dadqd1ulmdj42"]
 
 [ext_resource type="Script" uid="uid://bs1ofpih2pmf7" path="res://scenes/screen_charselect.gd" id="1_qn76j"]
 [ext_resource type="Texture2D" uid="uid://bafrbsn0lik63" path="res://sadx out/ad_back_c.webp" id="2_qn76j"]
@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://b8hoafdgxs0x" path="res://sadx out/AVA_CSR_HD/sphe_6.png" id="15_h386h"]
 [ext_resource type="FontFile" uid="uid://3x8ml0pelneb" path="res://sadx out/font/unicode.impact.ttf" id="16_h386h"]
 [ext_resource type="FontFile" uid="uid://2ru8kn45as4h" path="res://sadx out/font/Roboto-VariableFont_wdth,wght.ttf" id="16_ixx56"]
+[ext_resource type="PackedScene" uid="uid://ch33p8ip864bb" path="res://components/character_viz.tscn" id="18_ixx56"]
 
 [sub_resource type="Gradient" id="Gradient_l1mpm"]
 offsets = PackedFloat32Array(0, 0.746094)
@@ -133,7 +134,7 @@ font = SubResource("FontVariation_khuxk")
 font_size = 18
 outline_color = Color(0, 0, 0, 1)
 
-[node name="ScreenCharselect" type="Control"]
+[node name="ScreenCharselect" type="Control" node_paths=PackedStringArray("bg")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -141,6 +142,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_qn76j")
+bg = NodePath("BG")
+bg_fades = 3
 
 [node name="BG" type="TextureRect" parent="."]
 layout_mode = 1
@@ -525,3 +528,16 @@ text = "100%"
 label_settings = SubResource("LabelSettings_7r2fv")
 horizontal_alignment = 2
 vertical_alignment = 1
+
+[node name="CharacterViz" parent="." instance=ExtResource("18_ixx56")]
+layout_mode = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 136.0
+offset_right = 144.0
+offset_bottom = 200.0
+text = "switch"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

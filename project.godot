@@ -11,11 +11,12 @@ config_version=5
 [application]
 
 config/name="SADX Menu"
-run/main_scene="uid://cn4t2munve7f6"
+run/main_scene="uid://vok0idicae3h"
 config/features=PackedStringArray("4.4")
 boot_splash/bg_color=Color(0, 0, 0, 1)
 boot_splash/show_image=false
 config/icon="res://icon.svg"
+boot_splash/minimum_display_time=3000
 
 [autoload]
 
@@ -31,3 +32,7 @@ window/stretch/scale_mode="integer"
 [dotnet]
 
 project/assembly_name="SADX Menu"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/anthonyec.camera_preview/plugin.cfg")

@@ -2,8 +2,10 @@ extends CanvasLayer
 
 @onready var bar: TextureProgressBar = $TextureProgressBar
 @onready var timer: Timer = $Timer
+@onready var sfx: AudioStreamPlayer = $AudioStreamPlayer
 
 var current_file_id := 0
+var already_in_game := false
 
 signal finished_saving
 
@@ -26,3 +28,8 @@ func appear() -> void:
 		await timer.timeout
 	visible = false
 	finished_saving.emit()
+
+
+func play_everywhere(stream: AudioStream):
+	sfx.stream = stream
+	sfx.play()

@@ -67,8 +67,8 @@ func _on_button_text_pressed(language_chosen: String) -> void:
 func _on_button_exit_pressed() -> void:
 	audio_music.stop()
 	audio_voice.stop()
-	await get_tree().create_timer(0.45).timeout
-	get_tree().quit()
+	await get_tree().create_timer(0.65).timeout
+	fade_and_change_scene_to_file("res://scenes/screen_main.tscn")
 
 
 func _on_button_rumble_pressed() -> void:

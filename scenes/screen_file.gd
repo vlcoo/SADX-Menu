@@ -29,7 +29,7 @@ func _on_button_file_ok_pressed() -> void:
 	await dialog_file.finished_disappearing
 	audio_music.stop()
 	await get_tree().create_timer(0.35).timeout
-	fade_and_change_scene_to_file("res://scenes/screen_options.tscn")
+	fade_and_change_scene_to_file("res://scenes/screen_options.tscn" if NowSaving.already_in_game else "res://scenes/screen_main.tscn")
 
 
 func _on_button_file_cancel_pressed() -> void:
