@@ -23,6 +23,10 @@ func _ready() -> void:
 	pivot_offset = size / 2
 
 
+func _process(delta: float) -> void:
+	modulate.a = 0.65 if disabled else 1
+
+
 func find_and_set_label_text(text: String) -> void:
 	if label == null:
 		for child in get_children():

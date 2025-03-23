@@ -1,7 +1,5 @@
 extends ScreenBase
 
-@onready var audio_music: AudioStreamPlayer = $AudioMusic
-@onready var audio_voice: AudioStreamPlayer = $AudioVoice
 @onready var dialog_file: ButtonDialog = $CanvasLayer/DialogFile
 @onready var dialog_delete: ButtonDialog = $CanvasLayer/DialogDelete
 @onready var label_file_question: Label = $CanvasLayer/DialogDelete/VBoxContainer/LabelFileQuestion
@@ -93,7 +91,6 @@ func set_save_panel_info(save_file: FakeSaveFile) -> void:
 		i += 1
 	label_location_from.text = save_file.location_from_name
 	label_location_completed.text = save_file.location_completed_name
-	print(save_file.play_time_minutes)
 	var hours = int(save_file.play_time_minutes / 60)
 	var minutes = save_file.play_time_minutes - (hours * 60)
 	minutes = int(minutes / 10) * 10

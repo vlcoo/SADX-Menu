@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://cd4o2q11bc03n"
-path="res://.godot/imported/BAUHAUSB.TTF-83a6b88767ac5896383921d83124cd1a.fontdata"
+uid="uid://ntu4vavjh2hc"
+path="res://.godot/imported/BAUHAUSB.ttf-02a174a6f69ddc7a240b8d3ac17b7973.fontdata"
 
 [deps]
 
-source_file="res://sadx out/font/BAUHAUSB.TTF"
-dest_files=["res://.godot/imported/BAUHAUSB.TTF-83a6b88767ac5896383921d83124cd1a.fontdata"]
+source_file="res://sadx out/font/BAUHAUSB.ttf"
+dest_files=["res://.godot/imported/BAUHAUSB.ttf-02a174a6f69ddc7a240b8d3ac17b7973.fontdata"]
 
 [params]
 

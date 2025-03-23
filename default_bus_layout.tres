@@ -14,7 +14,6 @@ band_db/3200_hz = 2.6
 band_db/10000_hz = 9.5
 
 [resource]
-bus/0/mute = true
 bus/0/volume_db = -7.48688
 bus/1/name = &"SFX"
 bus/1/solo = false

@@ -1,6 +1,7 @@
-[gd_scene load_steps=41 format=3 uid="uid://dadqd1ulmdj42"]
+[gd_scene load_steps=44 format=3 uid="uid://dadqd1ulmdj42"]
 
 [ext_resource type="Script" uid="uid://bs1ofpih2pmf7" path="res://scenes/screen_charselect.gd" id="1_qn76j"]
+[ext_resource type="PackedScene" uid="uid://cc2agmm1x60l7" path="res://scenes/screen_main.tscn" id="2_ovh35"]
 [ext_resource type="Texture2D" uid="uid://bafrbsn0lik63" path="res://sadx out/ad_back_c.webp" id="2_qn76j"]
 [ext_resource type="FontFile" uid="uid://bqfgjjocebx3" path="res://sadx out/font/Roboto-Italic-VariableFont_wdth,wght.ttf" id="3_4uyco"]
 [ext_resource type="AudioStream" uid="uid://6w5q3gnefg1" path="res://sadx out/bgm/charactr.ogg" id="4_8ydyn"]
@@ -18,6 +19,8 @@
 [ext_resource type="FontFile" uid="uid://3x8ml0pelneb" path="res://sadx out/font/unicode.impact.ttf" id="16_h386h"]
 [ext_resource type="FontFile" uid="uid://2ru8kn45as4h" path="res://sadx out/font/Roboto-VariableFont_wdth,wght.ttf" id="16_ixx56"]
 [ext_resource type="PackedScene" uid="uid://ch33p8ip864bb" path="res://components/character_viz.tscn" id="18_ixx56"]
+[ext_resource type="PackedScene" uid="uid://cykomhofgiy7e" path="res://components/button_dialog.tscn" id="19_7r2fv"]
+[ext_resource type="PackedScene" uid="uid://b0d4sp4tmo32o" path="res://components/circle_button.tscn" id="20_ovh35"]
 
 [sub_resource type="Gradient" id="Gradient_l1mpm"]
 offsets = PackedFloat32Array(0, 0.746094)
@@ -91,13 +94,13 @@ border_width_right = 2
 border_width_bottom = 2
 border_color = Color(0, 0, 0, 1)
 
-[sub_resource type="FontVariation" id="FontVariation_c7ppe"]
+[sub_resource type="FontVariation" id="FontVariation_ixx56"]
 base_font = ExtResource("13_uifhk")
 spacing_top = -4
 spacing_bottom = -8
 
-[sub_resource type="LabelSettings" id="LabelSettings_nnrjf"]
-font = SubResource("FontVariation_c7ppe")
+[sub_resource type="LabelSettings" id="LabelSettings_khuxk"]
+font = SubResource("FontVariation_ixx56")
 font_size = 25
 font_color = Color(0, 0, 0, 1)
 
@@ -134,7 +137,7 @@ font = SubResource("FontVariation_khuxk")
 font_size = 18
 outline_color = Color(0, 0, 0, 1)
 
-[node name="ScreenCharselect" type="Control" node_paths=PackedStringArray("bg")]
+[node name="ScreenCharselect" type="Control" node_paths=PackedStringArray("focus_on_enter", "bg")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -142,8 +145,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_qn76j")
+focus_on_enter = NodePath("CharacterViz")
 bg = NodePath("BG")
 bg_fades = 3
+scene_when_escaped = ExtResource("2_ovh35")
 
 [node name="BG" type="TextureRect" parent="."]
 layout_mode = 1
@@ -156,7 +161,7 @@ texture = ExtResource("2_qn76j")
 expand_mode = 1
 metadata/_edit_lock_ = true
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureHeader" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -165,7 +170,7 @@ offset_bottom = 88.0
 grow_horizontal = 2
 texture = SubResource("GradientTexture1D_1rv5c")
 
-[node name="Label" type="Label" parent="TextureRect"]
+[node name="Label" type="Label" parent="TextureHeader"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -188,7 +193,7 @@ volume_db = 4.0
 autoplay = true
 bus = &"Voice"
 
-[node name="TextureRect2" type="TextureRect" parent="."]
+[node name="MG" type="TextureRect" parent="."]
 self_modulate = Color(1, 0.796078, 0, 0.490196)
 custom_minimum_size = Vector2(300, 300)
 layout_mode = 1
@@ -208,7 +213,7 @@ expand_mode = 1
 stretch_mode = 5
 metadata/_edit_group_ = true
 
-[node name="Label" type="Label" parent="TextureRect2"]
+[node name="Label" type="Label" parent="MG"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -220,7 +225,7 @@ label_settings = SubResource("LabelSettings_c7ppe")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TextureRect" type="TextureRect" parent="TextureRect2"]
+[node name="TextureRect" type="TextureRect" parent="MG"]
 clip_children = 1
 layout_mode = 1
 anchors_preset = 15
@@ -236,7 +241,7 @@ texture = ExtResource("8_04cwg")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="TextureRect" type="TextureRect" parent="TextureRect2/TextureRect"]
+[node name="TextureRect" type="TextureRect" parent="MG/TextureRect"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -245,7 +250,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("GradientTexture2D_4uyco")
 
-[node name="TextureRect2" type="TextureRect" parent="TextureRect2"]
+[node name="TextureRect2" type="TextureRect" parent="MG"]
 clip_children = 1
 layout_mode = 1
 anchors_preset = 15
@@ -261,7 +266,7 @@ texture = ExtResource("9_pyvyb")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="TextureRect" type="TextureRect" parent="TextureRect2/TextureRect2"]
+[node name="TextureRect" type="TextureRect" parent="MG/TextureRect2"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -270,7 +275,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("GradientTexture2D_8ydyn")
 
-[node name="Control" type="Control" parent="."]
+[node name="Footer" type="Control" parent="."]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -284,7 +289,7 @@ offset_bottom = -13.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="TextureRect4" type="TextureRect" parent="Control"]
+[node name="TextureRect4" type="TextureRect" parent="Footer"]
 clip_children = 1
 layout_mode = 1
 anchors_preset = -1
@@ -299,7 +304,7 @@ texture = ExtResource("11_04cwg")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="TextureRect4" type="TextureRect" parent="Control/TextureRect4"]
+[node name="TextureRect4" type="TextureRect" parent="Footer/TextureRect4"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -308,7 +313,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("GradientTexture2D_c7ppe")
 
-[node name="TextureRect3" type="TextureRect" parent="Control"]
+[node name="TextureRect3" type="TextureRect" parent="Footer"]
 self_modulate = Color(0, 0.137255, 1, 1)
 layout_mode = 1
 anchors_preset = 5
@@ -323,7 +328,7 @@ texture = ExtResource("12_04cwg")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="TextureRect" type="TextureRect" parent="Control"]
+[node name="TextureRect" type="TextureRect" parent="Footer"]
 clip_children = 1
 layout_mode = 1
 anchors_preset = 9
@@ -335,7 +340,7 @@ texture = ExtResource("10_8ydyn")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="TextureRect" type="TextureRect" parent="Control/TextureRect"]
+[node name="TextureRect" type="TextureRect" parent="Footer/TextureRect"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -344,7 +349,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("GradientTexture2D_c7ppe")
 
-[node name="Label" type="Label" parent="Control/TextureRect"]
+[node name="Label" type="Label" parent="Footer/TextureRect"]
 texture_filter = 2
 layout_mode = 1
 anchors_preset = 2
@@ -360,7 +365,7 @@ text = "File"
 label_settings = SubResource("LabelSettings_h386h")
 vertical_alignment = 1
 
-[node name="TextureRect2" type="TextureRect" parent="Control"]
+[node name="TextureRect2" type="TextureRect" parent="Footer"]
 clip_children = 1
 layout_mode = 1
 anchors_preset = 11
@@ -378,7 +383,7 @@ texture = ExtResource("10_8ydyn")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="TextureRect" type="TextureRect" parent="Control/TextureRect2"]
+[node name="TextureRect" type="TextureRect" parent="Footer/TextureRect2"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -388,7 +393,7 @@ grow_vertical = 2
 texture = SubResource("GradientTexture2D_c7ppe")
 flip_v = true
 
-[node name="Label" type="Label" parent="Control/TextureRect2"]
+[node name="Label" type="Label" parent="Footer/TextureRect2"]
 texture_filter = 2
 layout_mode = 1
 anchors_preset = 2
@@ -406,7 +411,7 @@ label_settings = SubResource("LabelSettings_h386h")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="PanelContainer" type="PanelContainer" parent="Control"]
+[node name="ContainerFullName" type="PanelContainer" parent="Footer"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -419,30 +424,28 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_04cwg")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control/PanelContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Footer/ContainerFullName"]
 layout_mode = 2
 theme_override_constants/separation = -1
 alignment = 1
 
-[node name="Label" type="Label" parent="Control/PanelContainer/VBoxContainer"]
+[node name="LabelFullName" type="Label" parent="Footer/ContainerFullName/VBoxContainer"]
 custom_minimum_size = Vector2(290, 18)
 layout_mode = 2
 size_flags_horizontal = 4
-size_flags_vertical = 6
-text = "LOREM IPSUM DOLOR S"
-label_settings = SubResource("LabelSettings_nnrjf")
+text = "SONIC THE HEDGEHOG"
+label_settings = SubResource("LabelSettings_khuxk")
 horizontal_alignment = 1
 vertical_alignment = 1
-text_overrun_behavior = 3
 
-[node name="TextureRect" type="TextureRect" parent="Control/PanelContainer/VBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="Footer/ContainerFullName/VBoxContainer"]
 custom_minimum_size = Vector2(290, 15)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
 texture = SubResource("GradientTexture1D_uifhk")
 
-[node name="TextureRect5" type="TextureRect" parent="Control"]
+[node name="TextureRect5" type="TextureRect" parent="Footer"]
 self_modulate = Color(1, 0, 0, 1)
 custom_minimum_size = Vector2(52, 52)
 layout_mode = 1
@@ -462,7 +465,7 @@ expand_mode = 1
 stretch_mode = 5
 metadata/_edit_group_ = true
 
-[node name="TextureRect" type="TextureRect" parent="Control/TextureRect5"]
+[node name="TextureRect" type="TextureRect" parent="Footer/TextureRect5"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -473,7 +476,7 @@ texture = ExtResource("15_h386h")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="LabelFileId" type="Label" parent="Control/TextureRect5"]
+[node name="LabelFileId" type="Label" parent="Footer/TextureRect5"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -486,7 +489,7 @@ label_settings = SubResource("LabelSettings_ixx56")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TextureRect6" type="TextureRect" parent="Control"]
+[node name="TextureRect6" type="TextureRect" parent="Footer"]
 self_modulate = Color(1, 0, 0, 1)
 custom_minimum_size = Vector2(52, 52)
 layout_mode = 1
@@ -506,7 +509,7 @@ expand_mode = 1
 stretch_mode = 5
 metadata/_edit_group_ = true
 
-[node name="TextureRect" type="TextureRect" parent="Control/TextureRect6"]
+[node name="TextureRect" type="TextureRect" parent="Footer/TextureRect6"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -517,7 +520,7 @@ texture = ExtResource("15_h386h")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Label" type="Label" parent="Control/TextureRect6"]
+[node name="LabelClearPercent" type="Label" parent="Footer/TextureRect6"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -533,12 +536,54 @@ vertical_alignment = 1
 layout_mode = 1
 metadata/_edit_lock_ = true
 
-[node name="Button" type="Button" parent="."]
+[node name="DialogCharacterSelected" parent="." node_paths=PackedStringArray("focus_on_appear") instance=ExtResource("19_7r2fv")]
+visible = false
+custom_minimum_size = Vector2(560, 96)
 layout_mode = 0
-offset_left = 32.0
-offset_top = 136.0
-offset_right = 144.0
-offset_bottom = 200.0
-text = "switch"
+offset_left = 40.0
+offset_top = 152.0
+offset_right = 600.0
+offset_bottom = 248.0
+focus_on_appear = NodePath("HBoxContainer/ButtonGame")
+apply_focus_delay = true
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[node name="HBoxContainer" type="HBoxContainer" parent="DialogCharacterSelected"]
+layout_mode = 2
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="ButtonGame" parent="DialogCharacterSelected/HBoxContainer" instance=ExtResource("20_ovh35")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" parent="DialogCharacterSelected/HBoxContainer/ButtonGame/TextureBG" index="1"]
+text = "Game"
+
+[node name="ButtonInstruction" parent="DialogCharacterSelected/HBoxContainer" instance=ExtResource("20_ovh35")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+confirm_type = 0
+
+[node name="Label" parent="DialogCharacterSelected/HBoxContainer/ButtonInstruction/TextureBG" index="1"]
+text = "Instruction"
+
+[node name="ButtonCancel" parent="DialogCharacterSelected/HBoxContainer" instance=ExtResource("20_ovh35")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+confirm_type = 2
+
+[node name="Label" parent="DialogCharacterSelected/HBoxContainer/ButtonCancel/TextureBG" index="1"]
+text = "Cancel"
+
+[connection signal="character_changed" from="CharacterViz" to="." method="_on_character_viz_character_changed"]
+[connection signal="character_selected" from="CharacterViz" to="." method="_on_character_viz_character_selected"]
+[connection signal="pressed" from="DialogCharacterSelected/HBoxContainer/ButtonGame" to="." method="_on_button_game_pressed"]
+[connection signal="pressed" from="DialogCharacterSelected/HBoxContainer/ButtonInstruction" to="." method="_on_button_instruction_pressed"]
+[connection signal="pressed" from="DialogCharacterSelected/HBoxContainer/ButtonCancel" to="." method="_on_button_cancel_pressed"]
+
+[editable path="DialogCharacterSelected/HBoxContainer/ButtonGame"]
+[editable path="DialogCharacterSelected/HBoxContainer/ButtonInstruction"]
+[editable path="DialogCharacterSelected/HBoxContainer/ButtonCancel"]

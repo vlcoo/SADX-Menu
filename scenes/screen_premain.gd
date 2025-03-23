@@ -1,7 +1,6 @@
 extends ScreenBase
 
 const POSITIVE = preload("res://sadx out/COMMON_BANK00/B00_00_02.wav")
-@onready var audio_music: AudioStreamPlayer = $AudioMusic
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 var can_start: bool:

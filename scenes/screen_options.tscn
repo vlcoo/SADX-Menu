@@ -1,8 +1,9 @@
-[gd_scene load_steps=53 format=3 uid="uid://c04uns7pw8k5g"]
+[gd_scene load_steps=54 format=3 uid="uid://c04uns7pw8k5g"]
 
 [ext_resource type="Script" uid="uid://cfxps151rtgo6" path="res://scenes/screen_options.gd" id="1_hnq7k"]
 [ext_resource type="Texture2D" uid="uid://bafrbsn0lik63" path="res://sadx out/ad_back_c.webp" id="1_rwryf"]
 [ext_resource type="FontFile" uid="uid://bqfgjjocebx3" path="res://sadx out/font/Roboto-Italic-VariableFont_wdth,wght.ttf" id="2_2wpci"]
+[ext_resource type="PackedScene" uid="uid://cc2agmm1x60l7" path="res://scenes/screen_main.tscn" id="2_b38ux"]
 [ext_resource type="Texture2D" uid="uid://cu16hosjh4hll" path="res://sadx out/AVA_OPTION_E_HD/op_lang_sitaji1.png" id="3_87p4l"]
 [ext_resource type="PackedScene" uid="uid://c2ap26y0tg5af" path="res://components/rectangle_button.tscn" id="3_l1mpm"]
 [ext_resource type="Texture2D" uid="uid://bn4uh8266axlm" path="res://sadx out/AVA_OPTION_E_HD/op_test_sitaji.png" id="3_mnlld"]
@@ -74,7 +75,7 @@ frame_0/duration = 0.5
 frame_1/texture = ExtResource("9_waxcx")
 frame_1/duration = 0.5
 
-[sub_resource type="FontVariation" id="FontVariation_v3ysq"]
+[sub_resource type="FontVariation" id="FontVariation_5nyu8"]
 base_font = ExtResource("4_a2b45")
 variation_opentype = {
 2003072104: 100,
@@ -83,7 +84,7 @@ variation_opentype = {
 variation_transform = Transform2D(1, 0, 0, 0.85, 0, 0)
 
 [sub_resource type="LabelSettings" id="LabelSettings_dva8u"]
-font = SubResource("FontVariation_v3ysq")
+font = SubResource("FontVariation_5nyu8")
 font_size = 18
 font_color = Color(0, 0.030132, 0.876562, 1)
 
@@ -135,7 +136,7 @@ frame_1/duration = 0.2
 frame_2/texture = ExtResource("5_drq2k")
 frame_2/duration = 0.2
 
-[sub_resource type="FontVariation" id="FontVariation_vvtcd"]
+[sub_resource type="FontVariation" id="FontVariation_b38ux"]
 base_font = ExtResource("4_a2b45")
 variation_opentype = {
 2003072104: 100,
@@ -144,11 +145,11 @@ variation_opentype = {
 spacing_top = 1
 
 [sub_resource type="LabelSettings" id="LabelSettings_ck2tf"]
-font = SubResource("FontVariation_vvtcd")
+font = SubResource("FontVariation_b38ux")
 font_size = 18
 
 [sub_resource type="LabelSettings" id="LabelSettings_el7h5"]
-font = SubResource("FontVariation_vvtcd")
+font = SubResource("FontVariation_b38ux")
 
 [sub_resource type="Animation" id="Animation_hnq7k"]
 length = 0.001
@@ -260,7 +261,7 @@ frame_3/texture = ExtResource("24_gnnqq")
 frame_3/duration = 0.1
 
 [sub_resource type="LabelSettings" id="LabelSettings_5w2r8"]
-font = SubResource("FontVariation_vvtcd")
+font = SubResource("FontVariation_b38ux")
 
 [sub_resource type="FontVariation" id="FontVariation_8bxch"]
 base_font = ExtResource("4_a2b45")
@@ -286,6 +287,7 @@ script = ExtResource("1_hnq7k")
 focus_on_enter = NodePath("PanelContainer/VBoxContainer/GridContainer/ButtonSoundTest")
 bg = NodePath("BG")
 bg_fades = 3
+scene_when_escaped = ExtResource("2_b38ux")
 metadata/_edit_lock_ = true
 
 [node name="BG" type="TextureRect" parent="."]

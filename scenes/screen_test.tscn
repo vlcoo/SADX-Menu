@@ -1,13 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://borr8lx2gieqc"]
+[gd_scene load_steps=11 format=3 uid="uid://borr8lx2gieqc"]
 
 [ext_resource type="Script" uid="uid://c4hkri37qe303" path="res://scenes/screen_test.gd" id="1_47hrx"]
 [ext_resource type="Texture2D" uid="uid://bafrbsn0lik63" path="res://sadx out/ad_back_c.webp" id="2_5wu30"]
 [ext_resource type="FontFile" uid="uid://bqfgjjocebx3" path="res://sadx out/font/Roboto-Italic-VariableFont_wdth,wght.ttf" id="3_txol2"]
 [ext_resource type="AudioStream" uid="uid://6w5q3gnefg1" path="res://sadx out/bgm/charactr.ogg" id="4_lu1lg"]
-[ext_resource type="AudioStream" uid="uid://cdr2sjvd7kao5" path="res://tmp/delicious burger.mp3" id="5_ttasa"]
 [ext_resource type="PackedScene" uid="uid://cykomhofgiy7e" path="res://components/button_dialog.tscn" id="6_dgbwa"]
 [ext_resource type="PackedScene" uid="uid://b0d4sp4tmo32o" path="res://components/circle_button.tscn" id="7_2yein"]
-[ext_resource type="Texture2D" uid="uid://deawbfk2jjwnh" path="res://tmp/sad.png" id="8_u6wo3"]
 
 [sub_resource type="Gradient" id="Gradient_l1mpm"]
 offsets = PackedFloat32Array(0, 0.746094)
@@ -71,7 +69,7 @@ anchor_bottom = 1.0
 offset_left = 40.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "The blingus:"
+text = "The header"
 label_settings = SubResource("LabelSettings_3bjj2")
 vertical_alignment = 1
 
@@ -81,9 +79,8 @@ autoplay = true
 bus = &"Music"
 
 [node name="AudioVoice" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_ttasa")
-volume_db = 4.0
 autoplay = true
+bus = &"Voice"
 
 [node name="DialogA" parent="." node_paths=PackedStringArray("focus_on_appear") instance=ExtResource("6_dgbwa")]
 layout_mode = 1
@@ -111,7 +108,7 @@ size_flags_horizontal = 6
 size_flags_vertical = 4
 
 [node name="Label" parent="DialogA/HBoxContainer/CircleButton/TextureBG" index="1"]
-text = "sploingy"
+text = "Aaaaaa"
 
 [node name="CircleButton2" parent="DialogA/HBoxContainer" instance=ExtResource("7_2yein")]
 layout_mode = 2
@@ -119,25 +116,8 @@ size_flags_horizontal = 6
 size_flags_vertical = 4
 confirm_type = 2
 
-[node name="TextureRect" type="TextureRect" parent="DialogA/HBoxContainer/CircleButton2/TextureBG" index="0"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -31.0
-offset_top = -10.0
-offset_right = 31.0
-offset_bottom = 11.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("8_u6wo3")
-expand_mode = 1
-
-[node name="Label" parent="DialogA/HBoxContainer/CircleButton2/TextureBG" index="2"]
-visible = false
-text = "aoaon"
+[node name="Label" parent="DialogA/HBoxContainer/CircleButton2/TextureBG" index="1"]
+text = "12345"
 
 [node name="CircleButton3" parent="DialogA/HBoxContainer" instance=ExtResource("7_2yein")]
 layout_mode = 2
@@ -145,7 +125,7 @@ size_flags_horizontal = 6
 size_flags_vertical = 4
 
 [node name="Label" parent="DialogA/HBoxContainer/CircleButton3/TextureBG" index="1"]
-text = "aoaon"
+text = "Bbbbb"
 
 [connection signal="pressed" from="DialogA/HBoxContainer/CircleButton" to="." method="_on_something_pressed"]
 [connection signal="pressed" from="DialogA/HBoxContainer/CircleButton2" to="." method="_on_something_pressed"]

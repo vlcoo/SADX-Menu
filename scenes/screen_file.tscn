@@ -1,7 +1,8 @@
-[gd_scene load_steps=44 format=3 uid="uid://c6cqda23rp6mp"]
+[gd_scene load_steps=45 format=3 uid="uid://c6cqda23rp6mp"]
 
 [ext_resource type="Script" uid="uid://cut0gm35dlsgi" path="res://scenes/screen_file.gd" id="1_hwqr8"]
 [ext_resource type="Texture2D" uid="uid://bafrbsn0lik63" path="res://sadx out/ad_back_c.webp" id="2_h4umb"]
+[ext_resource type="PackedScene" uid="uid://cn4t2munve7f6" path="res://scenes/screen_memcard.tscn" id="2_yjrsq"]
 [ext_resource type="FontFile" uid="uid://bqfgjjocebx3" path="res://sadx out/font/Roboto-Italic-VariableFont_wdth,wght.ttf" id="3_o5vf2"]
 [ext_resource type="AudioStream" uid="uid://byx71hujo1r6d" path="res://sadx out/bgm/option.ogg" id="4_arycw"]
 [ext_resource type="AudioStream" uid="uid://pmp2owjesp7v" path="res://sadx out/VOICE_US/0001.wav" id="5_thxm8"]
@@ -10,7 +11,7 @@
 [ext_resource type="FontFile" uid="uid://2ru8kn45as4h" path="res://sadx out/font/Roboto-VariableFont_wdth,wght.ttf" id="7_3bjj2"]
 [ext_resource type="Texture2D" uid="uid://dr3p5ynxrjb5s" path="res://sadx out/AVA_FILESEL_E_HD/frame.png" id="7_thxm8"]
 [ext_resource type="Texture2D" uid="uid://bah018vr1s4ig" path="res://sadx out/AVA_FILESEL_E_HD/fs_namesita.png" id="10_212g8"]
-[ext_resource type="FontFile" uid="uid://cd4o2q11bc03n" path="res://sadx out/font/BAUHAUSB.TTF" id="11_hjpyu"]
+[ext_resource type="FontFile" uid="uid://ntu4vavjh2hc" path="res://sadx out/font/BAUHAUSB.ttf" id="11_hjpyu"]
 [ext_resource type="Texture2D" uid="uid://ovklbnhxxc4r" path="res://sadx out/AVA_FILESEL_E_HD/maru_sonic.png" id="12_d02o1"]
 [ext_resource type="Texture2D" uid="uid://bo4nu0nqi4pm1" path="res://sadx out/AVA_FILESEL_E_HD/maru_tails.png" id="13_jdycb"]
 [ext_resource type="Texture2D" uid="uid://cqmlukwn6yvgn" path="res://sadx out/AVA_FILESEL_E_HD/n_maru_tails.png" id="14_mfxek"]
@@ -73,8 +74,6 @@ texture_margin_bottom = 27.0
 
 [sub_resource type="FontVariation" id="FontVariation_s2ld6"]
 base_font = ExtResource("11_hjpyu")
-variation_embolden = 0.5
-variation_transform = Transform2D(0.95, 0, 0, 1, 0, 0)
 
 [sub_resource type="LabelSettings" id="LabelSettings_bssy1"]
 font = SubResource("FontVariation_s2ld6")
@@ -134,6 +133,7 @@ script = ExtResource("1_hwqr8")
 focus_on_enter = NodePath("HBoxContainer/ContainerFileButtons/FileButton")
 bg = NodePath("BG")
 bg_fades = 3
+scene_when_escaped = ExtResource("2_yjrsq")
 
 [node name="BG" type="TextureRect" parent="."]
 layout_mode = 1

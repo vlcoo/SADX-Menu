@@ -1,7 +1,5 @@
 extends ScreenBase
 
-@onready var audio_music: AudioStreamPlayer = $AudioMusic
-@onready var audio_voice: AudioStreamPlayer = $AudioVoice
 @onready var panel_container: PanelContainer = $PanelContainer
 
 @onready var dialog_voice: ButtonDialog = $CanvasLayer/DialogVoice
@@ -25,11 +23,13 @@ func _on_button_msg_settings_pressed() -> void:
 	button_generic_l.find_and_set_label_text("Voice & Text")
 	button_generic_r.find_and_set_label_text("Voice Only")
 	store_remembered_focus()
+	dialog_generic_two.focus_on_appear = dialog_generic_two.get_node("HBoxContainer").get_child(NowSaving.current_save_file.opt_controller_rumble)
 	dialog_generic_two.appear()
 
 
 func _on_button_language_pressed() -> void:
 	store_remembered_focus()
+	dialog_voice.focus_on_appear = dialog_voice.get_node("VBoxContainer/HBoxContainer").get_child(NowSaving.current_save_file.opt_controller_rumble)
 	dialog_voice.appear()
 
 
@@ -37,6 +37,7 @@ func _on_button_sound_pressed() -> void:
 	button_generic_l.find_and_set_label_text("Stereo")
 	button_generic_r.find_and_set_label_text("Mono")
 	store_remembered_focus()
+	dialog_generic_two.focus_on_appear = dialog_generic_two.get_node("HBoxContainer").get_child(NowSaving.current_save_file.opt_controller_rumble)
 	dialog_generic_two.appear()
 
 
@@ -75,6 +76,7 @@ func _on_button_rumble_pressed() -> void:
 	button_generic_l.find_and_set_label_text("On")
 	button_generic_r.find_and_set_label_text("Off")
 	store_remembered_focus()
+	dialog_generic_two.focus_on_appear = dialog_generic_two.get_node("HBoxContainer").get_child(NowSaving.current_save_file.opt_controller_rumble)
 	dialog_generic_two.appear()
 
 

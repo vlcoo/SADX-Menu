@@ -1,9 +1,14 @@
 extends Control
 class_name ScreenBase
 
+const NEGATIVE = preload("res://sadx out/COMMON_BANK00/B00_00_03.wav")
+
+@onready var audio_music: AudioStreamPlayer = $AudioMusic
+@onready var audio_voice: AudioStreamPlayer = $AudioVoice
 @export var focus_on_enter: Control
 @export var bg: Control
 @export_flags("Fade In", "Fade Out") var bg_fades
+@export var scene_when_escaped: PackedScene
 var remembered_focus: Control
 
 
@@ -15,6 +20,15 @@ func _ready() -> void:
 		var bg_tween = create_tween()
 		bg.self_modulate = Color.GRAY
 		bg_tween.tween_property(bg, ^"color" if bg is ColorRect else ^"self_modulate", Color.WHITE, 0.1).set_trans(Tween.TRANS_LINEAR).set_ease(Tween.EASE_IN)
+
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed(&"ui_cancel") and scene_when_escaped != null:
+		NowSaving.play_everywhere(NEGATIVE)
+		audio_music.stop()
+		audio_voice.stop()
+		await get_tree().create_timer(0.65).timeout
+		fade_and_change_scene_to_file(scene_when_escaped.resource_path)
 
 
 func store_remembered_focus() -> void:

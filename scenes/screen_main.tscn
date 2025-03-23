@@ -1,6 +1,7 @@
-[gd_scene load_steps=15 format=3 uid="uid://cc2agmm1x60l7"]
+[gd_scene load_steps=16 format=3 uid="uid://cc2agmm1x60l7"]
 
 [ext_resource type="Script" uid="uid://hyrqt165sq3d" path="res://scenes/screen_main.gd" id="1_bhk8f"]
+[ext_resource type="PackedScene" uid="uid://vok0idicae3h" path="res://scenes/screen_premain.tscn" id="2_2ufqr"]
 [ext_resource type="Texture2D" uid="uid://doyh05rey322q" path="res://sadx out/title/bg_faded.png" id="2_sgss6"]
 [ext_resource type="FontFile" uid="uid://bqfgjjocebx3" path="res://sadx out/font/Roboto-Italic-VariableFont_wdth,wght.ttf" id="3_hlyr7"]
 [ext_resource type="AudioStream" uid="uid://bv1c048apind0" path="res://sadx out/bgm/title.ogg" id="6_2ufqr"]
@@ -65,6 +66,7 @@ script = ExtResource("1_bhk8f")
 focus_on_enter = NodePath("ButtonDialog/VBoxContainer/ButtonAdventure")
 bg = NodePath("BG")
 bg_fades = 3
+scene_when_escaped = ExtResource("2_2ufqr")
 metadata/_edit_lock_ = true
 
 [node name="BG" type="TextureRect" parent="."]
@@ -143,6 +145,8 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(184, 32)
 layout_mode = 2
 size_flags_vertical = 6
+focus_mode = 0
+disabled = true
 confirm_type = 0
 grow_when_focused = true
 
@@ -180,6 +184,8 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(184, 32)
 layout_mode = 2
 size_flags_vertical = 6
+focus_mode = 0
+disabled = true
 confirm_type = 0
 grow_when_focused = true
 

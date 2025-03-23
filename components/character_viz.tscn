@@ -11,6 +11,7 @@
 [sub_resource type="Environment" id="Environment_owpgv"]
 background_mode = 1
 background_color = Color(1, 1, 1, 0)
+background_energy_multiplier = 0.4
 
 [node name="CharacterViz" type="Control"]
 layout_mode = 3
@@ -21,6 +22,18 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_k5jc7")
+
+[node name="CircleCenter" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = 13.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="."]
 texture_filter = 1
@@ -43,30 +56,33 @@ render_target_update_mode = 4
 [node name="Viewport3d" type="Node3D" parent="SubViewportContainer/SubViewport"]
 
 [node name="Sonic" parent="SubViewportContainer/SubViewport/Viewport3d" groups=["SelectableCharacters"] instance=ExtResource("6_6c67r")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.3587, 0)
+transform = Transform3D(0.995805, 0.0915016, 0, -0.0915016, 0.995805, 0, 0, 0, 1, -3.4253, 0.594009, 0)
 
 [node name="Tails" parent="SubViewportContainer/SubViewport/Viewport3d" groups=["SelectableCharacters"] instance=ExtResource("7_rgvht")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 5.09, 0)
+transform = Transform3D(0.992071, -0.12568, 0, 0.12568, 0.992071, 0, 0, 0, 1, -3.87733, 0.764357, 0)
 visible = false
 
 [node name="Knuckles" parent="SubViewportContainer/SubViewport/Viewport3d" groups=["SelectableCharacters"] instance=ExtResource("5_7dsva")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.99162, 0)
+transform = Transform3D(0.983159, -0.18275, 0, 0.18275, 0.983159, 0, 0, 0, 1, -3.97952, 1.58447, 0)
 visible = false
+full_name = "Knuckles"
 
 [node name="Amy" parent="SubViewportContainer/SubViewport/Viewport3d" groups=["SelectableCharacters"] instance=ExtResource("2_t0d04")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2, 5.18, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.34084, 0.988784, 0)
 visible = false
 
 [node name="Big" parent="SubViewportContainer/SubViewport/Viewport3d" groups=["SelectableCharacters"] instance=ExtResource("3_t7cpp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2787, 1.96841, 0)
+transform = Transform3D(0.994613, -0.103661, 0, 0.103661, 0.994613, 0, 0, 0, 1, 20.0033, 1.96841, 0)
 visible = false
 
 [node name="Gamma" parent="SubViewportContainer/SubViewport/Viewport3d" groups=["SelectableCharacters"] instance=ExtResource("4_j5hos")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.7883, 7.26194, 0)
 visible = false
+short_name = "E-102 “𝛾”"
+full_name = "E-102 “Y”"
 
 [node name="Camera3D" type="Camera3D" parent="SubViewportContainer/SubViewport/Viewport3d"]
-transform = Transform3D(-4.27259e-08, 0.211154, -0.977453, 9.22983e-09, 0.977453, 0.211154, 1, -3.55271e-15, -4.37114e-08, -25.6838, 9.30794, 0)
+transform = Transform3D(-4.36198e-08, -0.0647067, -0.997904, -2.82845e-09, 0.997904, -0.0647067, 1, 2.17031e-14, -4.37115e-08, -26.494, -2.14238, 0)
 current = true
 fov = 48.0
 
@@ -75,13 +91,7 @@ environment = SubResource("Environment_owpgv")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="SubViewportContainer/SubViewport/Viewport3d"]
 transform = Transform3D(0.965926, 0.12941, -0.224144, 0.258819, -0.482963, 0.836516, 0, -0.866025, -0.5, 0, 14.1131, 0)
+light_energy = 2.0
 
-[node name="CircleCenter" type="Control" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-grow_horizontal = 2
-grow_vertical = 2
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+bus = &"SFX"

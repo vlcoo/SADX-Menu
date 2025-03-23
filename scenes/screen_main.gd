@@ -1,7 +1,5 @@
 extends ScreenBase
 
-@onready var audio_music: AudioStreamPlayer = $AudioMusic
-@onready var audio_voice: AudioStreamPlayer = $AudioVoice
 @onready var button_dialog: ButtonDialog = $ButtonDialog
 
 

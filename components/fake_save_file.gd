@@ -9,6 +9,12 @@ var location_completed_name := ""
 var play_time_minutes := 0
 var emblem_count := 0
 
+var opt_message_settings = 0
+var opt_language_voice = 0
+var opt_language_text = 0
+var opt_sound_output = 0
+var opt_controller_rumble = 0
+
 const POSSIBLE_CHARACTER_NAMES = ["Sonic", "Tails", "Knuckles", "Amy", "Big", "E-102 “γ”"]
 const CHARACTER_COLOURS = ["#0055ff", "#ffcc00", "#ff1100", "#ff88bb", "#7733cc", "#888888"]	# should've been taken from the list of SelectedCharacters on the CharacterViz, but eh...
 const POSSIBLE_LOCATION_FROMS = ["Station Square", "Mystic Ruins", "Egg Carrier"]
