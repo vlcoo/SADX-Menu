@@ -35,5 +35,5 @@ bus/3/name = &"Music"
 bus/3/solo = false
 bus/3/mute = false
 bus/3/bypass_fx = false
-bus/3/volume_db = -0.170492
+bus/3/volume_db = -1.28149
 bus/3/send = &"Master"

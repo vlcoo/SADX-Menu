@@ -149,6 +149,7 @@ focus_mode = 0
 disabled = true
 confirm_type = 0
 grow_when_focused = true
+fade_when_disabled = true
 
 [node name="Label" type="Label" parent="ButtonDialog/VBoxContainer/ButtonTrial"]
 layout_mode = 1
@@ -188,6 +189,7 @@ focus_mode = 0
 disabled = true
 confirm_type = 0
 grow_when_focused = true
+fade_when_disabled = true
 
 [node name="Label" type="Label" parent="ButtonDialog/VBoxContainer/ButtonInternet"]
 layout_mode = 1

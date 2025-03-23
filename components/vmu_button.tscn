@@ -64,6 +64,7 @@ pivot_offset = Vector2(42, 62)
 size_flags_horizontal = 4
 size_flags_vertical = 4
 mouse_filter = 2
+toggle_mode = true
 script = ExtResource("2_okx2l")
 grow_when_focused = true
 

@@ -9,6 +9,10 @@ func _on_timer_dialog_timeout() -> void:
 
 
 func _on_button_restart_pressed() -> void:
+	NowSaving.appear()
+	NowSaving.current_file_id = 0
+	NowSaving.current_save_file = FakeSaveFile.new(true)
+	NowSaving.already_in_game = false
 	dialog_a.disappear()
 	var tween = create_tween()
 	tween.tween_property(global_fader, ^"modulate", Color.BLACK, 1.2)

@@ -449,6 +449,9 @@ stream = ExtResource("5_gwfv3")
 autoplay = true
 bus = &"Music"
 
+[node name="AudioVoice" type="AudioStreamPlayer" parent="."]
+bus = &"Voice"
+
 [node name="TopLayer" type="Control" parent="."]
 layout_mode = 1
 anchors_preset = 15
@@ -504,7 +507,7 @@ offset_right = 107.0
 offset_bottom = 154.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "PressStartButton"
+text = "PressEnterButton"
 label_settings = SubResource("LabelSettings_thwdk")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -512,7 +515,7 @@ vertical_alignment = 1
 [node name="FakeTrailL" type="TextureRect" parent="LabelPressStart"]
 show_behind_parent = true
 layout_mode = 1
-anchors_preset = 9
+anchors_preset = -1
 anchor_bottom = 1.0
 offset_left = -11.0
 offset_top = 1.0
@@ -524,13 +527,13 @@ expand_mode = 1
 [node name="FakeTrailR" type="TextureRect" parent="LabelPressStart"]
 show_behind_parent = true
 layout_mode = 1
-anchors_preset = 11
+anchors_preset = -1
 anchor_left = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -1.0
+offset_left = -0.5
 offset_top = 6.0
-offset_right = 16.0
+offset_right = 16.5
 offset_bottom = -3.0
 grow_horizontal = 0
 grow_vertical = 2

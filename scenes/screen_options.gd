@@ -60,8 +60,8 @@ func _on_button_voice_pressed(language_chosen: String) -> void:
 
 func _on_button_text_pressed(language_chosen: String) -> void:
 	dialog_text.disappear()
-	restore_remembered_focus()
 	await dialog_text.finished_disappearing
+	restore_remembered_focus()
 	NowSaving.appear()
 
 
@@ -82,6 +82,6 @@ func _on_button_rumble_pressed() -> void:
 
 func _on_button_generic_pressed() -> void:
 	dialog_generic_two.disappear()
-	restore_remembered_focus()
 	await dialog_generic_two.finished_disappearing
+	restore_remembered_focus()
 	NowSaving.appear()

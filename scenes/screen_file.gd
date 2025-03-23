@@ -50,6 +50,7 @@ func _on_button_file_ok_pressed() -> void:
 
 func _on_button_file_cancel_pressed() -> void:
 	dialog_file.disappear()
+	await dialog_file.finished_disappearing
 	restore_remembered_focus()
 
 
@@ -62,6 +63,7 @@ func _on_button_file_delete_pressed() -> void:
 
 func _on_button_delete_ok_pressed() -> void:
 	dialog_delete.disappear()
+	await dialog_delete.finished_disappearing
 	restore_remembered_focus()
 	NowSaving.appear()
 	if currently_selected_file == 1:
@@ -71,6 +73,7 @@ func _on_button_delete_ok_pressed() -> void:
 
 func _on_button_delete_cancel_pressed() -> void:
 	dialog_delete.disappear()
+	await dialog_delete.finished_disappearing
 	restore_remembered_focus()
 
 

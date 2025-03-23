@@ -13,10 +13,10 @@ config_version=5
 config/name="SADX Menu"
 run/main_scene="uid://vok0idicae3h"
 config/features=PackedStringArray("4.4")
-boot_splash/bg_color=Color(0, 0, 0, 1)
-boot_splash/show_image=false
+boot_splash/bg_color=Color(0.935938, 0.935938, 0.935938, 1)
+boot_splash/image="uid://bihod6us4dgp3"
 config/icon="res://icon.svg"
-boot_splash/minimum_display_time=3000
+boot_splash/minimum_display_time=4000
 
 [autoload]
 

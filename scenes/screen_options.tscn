@@ -442,6 +442,7 @@ layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
 confirm_type = 0
+fade_when_disabled = true
 
 [node name="Label2" type="Label" parent="PanelContainer/VBoxContainer/GridContainer/ButtonSoundTest"]
 layout_mode = 1

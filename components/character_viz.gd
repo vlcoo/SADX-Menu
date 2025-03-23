@@ -41,7 +41,7 @@ func _ready() -> void:
 		var char_title = CHAR_TITLE.instantiate()
 		circle_center.add_child(char_title)
 		char_title.character = child
-		char_title.disabled = NowSaving.current_save_file.character_clear_percents[i] < 0.1
+		char_title.disabled = NowSaving.get_save_file_or_empty().character_clear_percents[i] < 0.1
 		character_titles.append(char_title)
 		i += 1
 	

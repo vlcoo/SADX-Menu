@@ -16,6 +16,10 @@ func _ready() -> void:
 	visible = false
 
 
+func get_save_file_or_empty() -> FakeSaveFile:
+	return current_save_file if current_file_id == 1 else FakeSaveFile.new(false)
+
+
 func appear() -> void:
 	visible = true
 	bar.value = 0

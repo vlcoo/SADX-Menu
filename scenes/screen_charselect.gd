@@ -2,9 +2,9 @@ extends ScreenBase
 
 @onready var character_viz: CharacterViz = $CharacterViz
 @onready var label_file_id: Label = $Footer/TextureRect5/LabelFileId
-@onready var container_full_name: PanelContainer = $Control/ContainerFullName
-@onready var label_full_name: Label = $Control/ContainerFullName/VBoxContainer/LabelFullName
-@onready var label_clear_percent: Label = $Control/TextureRect6/LabelClearPercent
+@onready var container_full_name: PanelContainer = $Footer/ContainerFullName
+@onready var label_full_name: Label = $Footer/ContainerFullName/VBoxContainer/LabelFullName
+@onready var label_clear_percent: Label = $Footer/TextureRect6/LabelClearPercent
 @onready var dialog_character_selected: ButtonDialog = $DialogCharacterSelected
 
 
@@ -23,7 +23,7 @@ func _on_character_viz_character_changed(new_id: int) -> void:
 	var character := character_viz.characters[new_id]
 	var character_title := character_viz.character_titles[new_id]
 	label_full_name.text = character.full_name.to_upper()
-	var character_percent = NowSaving.current_save_file.character_clear_percents[new_id]
+	var character_percent = NowSaving.get_save_file_or_empty().character_clear_percents[new_id]
 	character_percent *= 10
 	character_percent = int(floor(character_percent))
 	character_percent *= 10
@@ -52,6 +52,6 @@ func _on_button_instruction_pressed() -> void:
 
 func _on_button_cancel_pressed() -> void:
 	dialog_character_selected.disappear()
-	restore_remembered_focus()
 	await dialog_character_selected.finished_disappearing
+	restore_remembered_focus()
 	character_viz.locked = false

@@ -15,6 +15,7 @@ const NEGATIVE = preload("res://sadx out/COMMON_BANK00/B00_00_03.wav")
 @export var confirm_type := ConfirmType.POSITIVE
 @export var grow_when_focused := false
 @export var flash_when_focused := true
+@export var fade_when_disabled := false
 @export var label: Label
 var focus_immediately := false
 
@@ -24,7 +25,7 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
-	modulate.a = 0.65 if disabled else 1
+	if fade_when_disabled: modulate.a = 0.65 if disabled else 1
 
 
 func find_and_set_label_text(text: String) -> void:
@@ -38,6 +39,7 @@ func find_and_set_label_text(text: String) -> void:
 
 
 func _on_pressed() -> void:
+	if button_pressed: disabled = true
 	if confirm_type == ConfirmType.SILENT: return
 	match confirm_type:
 		ConfirmType.POSITIVE:
@@ -49,6 +51,9 @@ func _on_pressed() -> void:
 
 func _on_focus_entered() -> void:
 	rectangle_focus.visible = true
+	if button_pressed:
+		disabled = false
+		button_pressed = false
 	if not focus_immediately:
 		sfx.stream = BEEP
 		sfx.play()
