@@ -3,7 +3,22 @@
 [ext_resource type="Texture2D" uid="uid://cxt8122bpwys2" path="res://sadx out/AVA_CSR_HD/sphe_7.png" id="1_3cat2"]
 [ext_resource type="Script" uid="uid://ding781c8h6fg" path="res://components/char_title.gd" id="2_n8032"]
 [ext_resource type="Texture2D" uid="uid://b8hoafdgxs0x" path="res://sadx out/AVA_CSR_HD/sphe_6.png" id="3_prrhh"]
-[ext_resource type="FontFile" uid="uid://ntu4vavjh2hc" path="res://sadx out/font/BAUHAUSB.TTF" id="4_4m5r2"]
+[ext_resource type="FontFile" uid="uid://ntu4vavjh2hc" path="res://sadx out/font/BAUHAUSB.ttf" id="4_4m5r2"]
+
+[sub_resource type="Animation" id="Animation_n8032"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LabelAnchor/Label:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_3cat2"]
 resource_name = "flash"
@@ -21,21 +36,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(1, 1), Vector2(1.5, 1.5)]
-}
-
-[sub_resource type="Animation" id="Animation_n8032"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("LabelAnchor/Label:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_prrhh"]
@@ -83,6 +83,7 @@ offset_left = -66.0
 offset_top = -27.0
 offset_right = 66.0
 offset_bottom = 15.0
+grow_horizontal = 2
 pivot_offset = Vector2(91, 21)
 
 [node name="Label" type="Label" parent="LabelAnchor"]

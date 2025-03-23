@@ -94,7 +94,16 @@ func switch_character(delta: int) -> void:
 
 
 func select_character() -> AudioStream:
-	return characters[current_index_mod].set_anim_selected() 
+	return characters[current_index_mod].set_anim_selected()
+
+
+func on_quit_screen() -> void:
+	locked = true
+	for title in character_titles:
+		if title.selected_level == -1:
+			title.selected_level = -2
+		elif title.selected_level == 0 and not title.disabled:
+			title.selected_level = 1
 
 
 func distribute_titles_along_circle(angle_offset: float = 0) -> void:

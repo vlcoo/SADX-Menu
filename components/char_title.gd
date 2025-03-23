@@ -24,20 +24,24 @@ var selected_level: int = -1:
 			-2:
 				label.visible = false
 				label_anchor.scale = Vector2.ONE
+				label.z_index = 0
 			-1:
 				label.visible = true
 				animation_player.play(&"RESET")
 				var tween = create_tween()
 				tween.tween_property(self, ^"self_modulate", Color.BLUE, 0.5)
+				label.z_index = 0
 			0:
 				label.visible = true
 				label_anchor.scale = Vector2.ONE
 				if not disabled: animation_player.play(&"flash")
 				self_modulate = Color.RED
+				label.z_index = 2
 			1:
 				animation_player.stop()
 				label.visible = true
 				label.scale = Vector2(1.6, 1.6)
+				label.z_index = 2
 
 const LABEL_POS_OFFSET := Vector2(0, -27)
 

@@ -13,6 +13,10 @@ func _ready() -> void:
 	label_file_id.text = str(NowSaving.current_file_id)
 
 
+func on_quit_screen() -> void:
+	character_viz.on_quit_screen()
+
+
 func _on_circle_button_pressed() -> void:
 	character_viz.characters[character_viz.current_index].set_anim_selected()
 
@@ -37,6 +41,7 @@ func _on_character_viz_character_selected() -> void:
 
 
 func _on_button_game_pressed() -> void:
+	scene_when_escaped = null
 	dialog_character_selected.disappear()
 	await dialog_character_selected.finished_disappearing
 	var voice_stream = character_viz.select_character()

@@ -28,7 +28,7 @@ func _ready() -> void:
 func _on_file_button_cancel_pressed() -> void:
 	audio_music.stop()
 	audio_voice.stop()
-	await get_tree().create_timer(0.65).timeout
+	await get_tree().create_timer(0.5).timeout
 	fade_and_change_scene_to_file("res://scenes/screen_memcard.tscn")
 
 
