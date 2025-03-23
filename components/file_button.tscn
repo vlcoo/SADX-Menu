@@ -155,8 +155,8 @@ text = "   1"
 label_settings = SubResource("LabelSettings_imhs7")
 vertical_alignment = 1
 
-[connection signal="focus_entered" from="." to="." method="_on_focus_filebutton_entered"]
 [connection signal="focus_entered" from="." to="." method="_on_focus_entered"]
-[connection signal="focus_exited" from="." to="." method="_on_focus_filebutton_exited"]
+[connection signal="focus_entered" from="." to="." method="_on_focus_filebutton_entered"]
 [connection signal="focus_exited" from="." to="." method="_on_focus_exited"]
+[connection signal="focus_exited" from="." to="." method="_on_focus_filebutton_exited"]
 [connection signal="pressed" from="." to="." method="_on_pressed"]

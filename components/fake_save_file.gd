@@ -15,7 +15,7 @@ var opt_language_text = 0
 var opt_sound_output = 0
 var opt_controller_rumble = 0
 
-const POSSIBLE_CHARACTER_NAMES = ["Sonic", "Tails", "Knuckles", "Amy", "Big", "E-102 “γ”"]
+const POSSIBLE_CHARACTER_NAMES = ["Sonic", "Tails", "Knuckles", "Amy", "Big", "E-102 “𝛾”"]
 const CHARACTER_COLOURS = ["#0055ff", "#ffcc00", "#ff1100", "#ff88bb", "#7733cc", "#888888"]	# should've been taken from the list of SelectedCharacters on the CharacterViz, but eh...
 const POSSIBLE_LOCATION_FROMS = ["Station Square", "Mystic Ruins", "Egg Carrier"]
 const POSSIBLE_LOCATION_COMPLETEDS = ["Hedgehog Hammer", "Windy Valley", "Casinopolis", "Icecap", "Sky Deck", "Speed Highway", "Twinkle Park", "Icecap", "Emerald Coast", "Hot Shelter", "Emerald Coast", "Windy Valley", "Casinopolis", "Icecap", "Twinkle Park", "Speed Highway", "Red Mountain", "Sky Deck", "Lost World", "Final Egg", "Twinkle Park", "Hot Shelter", "Final Egg", "Emerald Coast", "Windy Valley", "Red Mountain", "Hot Shelter", "Speed Highway", "Casinopolis", "Red Mountain", "Lost World", "Sky Deck"]
