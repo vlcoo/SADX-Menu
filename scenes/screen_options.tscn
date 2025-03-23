@@ -733,9 +733,6 @@ layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 4
 
-[node name="Label" parent="CanvasLayer/DialogVoice/VBoxContainer/HBoxContainer/ButtonVoiceJapanese/TextureBG" index="1"]
-text = "日本語"
-
 [node name="DialogText" parent="CanvasLayer" node_paths=PackedStringArray("focus_on_appear") instance=ExtResource("24_5r6a4")]
 visible = false
 offset_left = 32.0
@@ -778,9 +775,6 @@ size_flags_vertical = 4
 focus_neighbor_left = NodePath("../ButtonVoiceEnglish")
 focus_neighbor_right = NodePath("../ButtonGerman")
 focus_neighbor_bottom = NodePath("../../HBoxContainer2/ButtonSpanish")
-
-[node name="Label" parent="CanvasLayer/DialogText/VBoxContainer/HBoxContainer/ButtonJapanese/TextureBG" index="1"]
-text = "日本語"
 
 [node name="ButtonGerman" parent="CanvasLayer/DialogText/VBoxContainer/HBoxContainer" instance=ExtResource("25_8bxch")]
 layout_mode = 2

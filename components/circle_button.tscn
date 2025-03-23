@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://b0d4sp4tmo32o"]
+[gd_scene load_steps=12 format=3 uid="uid://b0d4sp4tmo32o"]
 
 [ext_resource type="Texture2D" uid="uid://cxt8122bpwys2" path="res://sadx out/AVA_CSR_HD/sphe_7.png" id="1_o4kb5"]
 [ext_resource type="Texture2D" uid="uid://b8hoafdgxs0x" path="res://sadx out/AVA_CSR_HD/sphe_6.png" id="2_4wjwm"]
 [ext_resource type="Script" uid="uid://v0dklnwwk228" path="res://components/button.gd" id="2_jldi0"]
 [ext_resource type="PackedScene" uid="uid://crrky6xqj5jnw" path="res://components/circle_focus.tscn" id="3_o4kb5"]
 [ext_resource type="FontFile" uid="uid://2ru8kn45as4h" path="res://sadx out/font/Roboto-VariableFont_wdth,wght.ttf" id="4_ieq88"]
+[ext_resource type="FontFile" uid="uid://d30f6u3pnfv83" path="res://sadx out/font/NotoSansJP-Medium.ttf" id="6_jldi0"]
 
 [sub_resource type="Animation" id="Animation_xicbb"]
 length = 0.001
@@ -46,6 +47,7 @@ _data = {
 }
 
 [sub_resource type="FontVariation" id="FontVariation_4wjwm"]
+fallbacks = Array[Font]([ExtResource("6_jldi0")])
 base_font = ExtResource("4_ieq88")
 variation_opentype = {
 2003072104: 100,
@@ -117,7 +119,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(52, 28)
-text = "English"
+text = "日本語"
 label_settings = SubResource("LabelSettings_4wjwm")
 horizontal_alignment = 1
 vertical_alignment = 1

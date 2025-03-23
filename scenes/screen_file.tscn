@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://c6cqda23rp6mp"]
+[gd_scene load_steps=47 format=3 uid="uid://c6cqda23rp6mp"]
 
 [ext_resource type="Script" uid="uid://cut0gm35dlsgi" path="res://scenes/screen_file.gd" id="1_hwqr8"]
 [ext_resource type="Texture2D" uid="uid://bafrbsn0lik63" path="res://sadx out/ad_back_c.webp" id="2_h4umb"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://bah018vr1s4ig" path="res://sadx out/AVA_FILESEL_E_HD/fs_namesita.png" id="10_212g8"]
 [ext_resource type="FontFile" uid="uid://ntu4vavjh2hc" path="res://sadx out/font/BAUHAUSB.ttf" id="11_hjpyu"]
 [ext_resource type="Texture2D" uid="uid://ovklbnhxxc4r" path="res://sadx out/AVA_FILESEL_E_HD/maru_sonic.png" id="12_d02o1"]
+[ext_resource type="FontFile" uid="uid://dm2dics4cr4q6" path="res://sadx out/font/NotoSansMath-Regular.ttf" id="13_bssy1"]
 [ext_resource type="Texture2D" uid="uid://bo4nu0nqi4pm1" path="res://sadx out/AVA_FILESEL_E_HD/maru_tails.png" id="13_jdycb"]
 [ext_resource type="Texture2D" uid="uid://cqmlukwn6yvgn" path="res://sadx out/AVA_FILESEL_E_HD/n_maru_tails.png" id="14_mfxek"]
 [ext_resource type="Texture2D" uid="uid://cwj0d1yjnettf" path="res://sadx out/AVA_FILESEL_E_HD/maru_knuckles.png" id="15_r84nj"]
@@ -72,7 +73,16 @@ texture_margin_top = 27.0
 texture_margin_right = 27.0
 texture_margin_bottom = 27.0
 
+[sub_resource type="FontVariation" id="FontVariation_j52cx"]
+base_font = ExtResource("13_bssy1")
+variation_embolden = 0.7
+variation_transform = Transform2D(0.8, 0, 0, 0.85, 0, 0)
+spacing_top = -2
+spacing_bottom = -2
+baseline_offset = -0.16
+
 [sub_resource type="FontVariation" id="FontVariation_s2ld6"]
+fallbacks = Array[Font]([SubResource("FontVariation_j52cx")])
 base_font = ExtResource("11_hjpyu")
 
 [sub_resource type="LabelSettings" id="LabelSettings_bssy1"]
