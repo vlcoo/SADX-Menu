@@ -1,7 +1,0 @@
-4011,black.png,8x8
-365759,gameover.png,256x32
-365758,casol.png,128x64
-365756,sphe0.png,128x64
-365757,sphe1.png,128x64
-10000200,npa_saikai.png,256x64
-10000202,npa_stop.png,256x64

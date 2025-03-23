@@ -1,2 +1,0 @@
-365177,st_san.png,32x16
-365178,st_san_s.png,32x16
